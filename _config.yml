@@ -41,11 +41,12 @@ social:
   email: kinganthony.orande@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
+    - https://www.linkedin.com/in/king-anthony-orandede-4b92bb186/
     - https://twitter.com/username # change to your twitter homepage
     - https://github.com/kengentenerende # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    - https://www.linkedin.com/in/king-anthony-orandede-4b92bb186/
+    
 
 google_site_verification: # fill in to your verification string
 
