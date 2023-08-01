@@ -120,7 +120,7 @@ sudo systemctl enable elasticsearch kibana --now
 
 # 4. Enroll Kibana
 
-To generate an Enrollment token for Kibana, execute the following command in the terminal:
+To generate an Enrollment Token for Kibana, execute the following command in the terminal:
 
 ```bash
 sudo /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
@@ -133,7 +133,7 @@ You will be redirected to the enrollment page of Kibana. At this point, paste th
 
 ![]({{site.baseurl}}/assets/img/2023-08-01-Getting Started with Kali Purple - Installing Elastic Stack/2023-08-01-Kibana_Enrollement_Page.png){: width="700" height="400"}
 
-After that, you will be prompted to enter the verification code into Kibana.
+After that, you will be prompted to enter the Verification Code into Kibana.
 
 ![]({{site.baseurl}}/assets/img/2023-08-01-Getting Started with Kali Purple - Installing Elastic Stack/2023-08-01-Kibana_Verification_Code.png){: width="700" height="400"}
 
@@ -143,35 +143,7 @@ To generate Verification Code for Kibana, execute the following command:
 sudo /usr/share/kibana/bin/kibana-verification-code
 ```
 
-Enter the default username _elastic_ along with the password generated in Step 1.
+Then, Enter the default username _elastic_ along with the password generated in Step 1. Now, you can access Elasticsearch SIEM on Kali Purple.
 
+![]({{site.baseurl}}/assets/img/2023-08-01-Getting Started with Kali Purple - Installing Elastic Stack/2023-08-01-Kibana_Homet_Page.png){:width="100%"}
 
-
-
-
-[**Real Favicon Generator**](https://realfavicongenerator.net/)
-
-Prepare a square image (PNG, JPG, or SVG) with a size of 512x512 or more, and then go to the online tool [**Real Favicon Generator**](https://realfavicongenerator.net/) and click the button <kbd>Select your Favicon image</kbd> to upload your image file.
-
-In the next step, the webpage will show all usage scenarios. You can keep the default options, scroll to the bottom of the page, and click the button <kbd>Generate your Favicons and HTML code</kbd> to generate the favicon.
-
-## Download & Replace
-
-Download the generated package, unzip and delete the following two from the extracted files:
-
-- `browserconfig.xml`{: .filepath}
-- `site.webmanifest`{: .filepath}
-
-And then copy the remaining image files (`.PNG`{: .filepath} and `.ICO`{: .filepath}) to cover the original files in the directory `assets/img/favicons/`{: .filepath} of your Jekyll site. If your Jekyll site doesn't have this directory yet, just create one.
-
-The following table will help you understand the changes to the favicon files:
-
-| File(s)             | From Online Tool                  | From Chirpy |
-|---------------------|:---------------------------------:|:-----------:|
-| `*.PNG`             | ✓                                 | ✗           |
-| `*.ICO`             | ✓                                 | ✗           |
-
->  ✓ means keep, ✗ means delete.
-{: .prompt-info }
-
-The next time you build the site, the favicon will be replaced with a customized edition.
