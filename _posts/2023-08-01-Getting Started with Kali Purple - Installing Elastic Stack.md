@@ -4,12 +4,14 @@ author: keng
 date: 2023-08-01  09:23:59 +0800
 categories: [Kali Purple]
 tags: [kalipurple]
+img_path: '/assets/img'
 ---
 
 ## What is Kali Purple?
 
-![Alt text](image.png){: width="972" height="589" }
+![Desktop View](/assets/img/Kali-Purple-banner-2023.1-release.jpg){: width="972" height="589" }
 _Full screen width and center alignment_
+
 
 Kali Linux, the popular Debian-based Linux distribution designed for digital forensics and penetration testing, announced a new project named [**Kali Purple**](https://gitlab.com/kalilinux/kali-purple/documentation/-/wikis/home), a distro designed for defensive security.
 
