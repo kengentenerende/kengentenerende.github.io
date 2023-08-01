@@ -110,7 +110,7 @@ echo "server.host: \"kali-purple.kali.purple\"" | sudo tee -a /etc/kibana/kibana
 
 Ensure that kali-purple.kali.purple is only mapped to the IP address of your Kali Purple Machine in <kbd>/etc/hosts</kbd> in order to bind the Kibana interface.
 
-![]({{site.baseurl}}/assets/img/2023-08-01-Getting Started with Kali Purple - Installing Elastic Stack/2023-08-01-Bind_Internal_IP.png){:width="100%"}
+![]({{site.baseurl}}/assets/img/2023-08-01-Getting Started with Kali Purple - Installing Elastic Stack/2023-08-01-Bind_Internal_IP.png){: width="700" height="400"}
 
 Once done, you can now start Elasticsearch and Kibana.
 
