@@ -102,7 +102,12 @@ sudo apt install kibana
 sudo /usr/share/kibana/bin/kibana-encryption-keys generate -q
 ```
 
+Add keys to </kbd>/etc/kibana/kibana.yml</kbd>
 
+```bash
+echo "server.host: \"kali-purple.kali.purple\"" | sudo tee -a /etc/kibana/kibana.yml
+```
+![]({{site.baseurl}}/assets/img/2023-08-01-Getting Started with Kali Purple - Installing Elastic Stack/2023-08-01-Add_Kibana_Key.png){:width="100%"}
 
 [**Real Favicon Generator**](https://realfavicongenerator.net/)
 
