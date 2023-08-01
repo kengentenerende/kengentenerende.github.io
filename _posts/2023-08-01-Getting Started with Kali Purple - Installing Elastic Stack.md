@@ -65,6 +65,7 @@ Kali Purple Hub for the community to share:
 Kali Purple Discord channels for community collaboration and fun
 
 ## Installation
+
 Initially, refer to the comprehensive installation instructions for Kali Purple on VMWare Workstation, which were provided by [**@JonGoodCyber**](https://www.youtube.com/@JonGoodCyber)
 {% include embed/youtube.html id='y6s0B3LGRZw' %}
 
