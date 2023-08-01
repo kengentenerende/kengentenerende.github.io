@@ -1,6 +1,6 @@
 ---
 title: Getting Started with Kali Purple - Installing Elastic Stack
-author: keng
+author: King Anthony Orande
 date: 2023-08-01  09:23:59 +0800
 categories: [Kali Purple]
 tags: [kalipurple,kibana,elk]
