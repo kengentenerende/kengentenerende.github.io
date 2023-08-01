@@ -69,11 +69,24 @@ Kali Purple Discord channels for community collaboration and fun
 Initially, refer to the comprehensive installation instructions for Kali Purple on VMWare Workstation, which were provided by [**@JonGoodCyber**](https://www.youtube.com/@JonGoodCyber)
 {% include embed/youtube.html id='y6s0B3LGRZw' %}
 
+## Setting-up Elastic Stack
+
+### 1. Install dependencies
+
+```
+sudo apt-get install curl
+curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/elastic-archive-keyring.gpg
+echo "deb https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-8.x.list
+sudo bash -c "export HOSTNAME=kali-purple.kali.purple; apt-get install elasticsearch -y"
+```
+
+[**Real Favicon Generator**](https://realfavicongenerator.net/)
+
 Prepare a square image (PNG, JPG, or SVG) with a size of 512x512 or more, and then go to the online tool [**Real Favicon Generator**](https://realfavicongenerator.net/) and click the button <kbd>Select your Favicon image</kbd> to upload your image file.
 
 In the next step, the webpage will show all usage scenarios. You can keep the default options, scroll to the bottom of the page, and click the button <kbd>Generate your Favicons and HTML code</kbd> to generate the favicon.
 
-## Setting-up Elastic Stack
+
 
 ## Download & Replace
 
