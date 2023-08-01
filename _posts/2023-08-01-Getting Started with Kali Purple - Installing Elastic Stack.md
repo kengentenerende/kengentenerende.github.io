@@ -118,7 +118,7 @@ Once done, you can now start Elasticsearch and Kibana.
 sudo systemctl enable elasticsearch kibana --now
 ```
 
-# 4. Enroll Kibana
+## 4. Enroll Kibana
 
 To generate an Enrollment Token for Kibana, execute the following command in the terminal:
 
