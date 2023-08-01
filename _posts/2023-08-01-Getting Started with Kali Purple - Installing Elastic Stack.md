@@ -3,7 +3,7 @@ title: Getting Started with Kali Purple - Installing Elastic Stack
 author: keng
 date: 2023-08-01  09:23:59 +0800
 categories: [Kali Purple]
-tags: [kalipurple]
+tags: [kalipurple,kibana,elk]
 ---
 
 ## What is Kali Purple?
@@ -66,7 +66,7 @@ Kali Purple Discord channels for community collaboration and fun
 
 ## Installation
 
-Initially, refer to the comprehensive installation instructions for Kali Purple on VMWare Workstation, which were provided by [**@JonGoodCyber**](https://www.youtube.com/@JonGoodCyber)
+Initially, check the comprehensive installation instructions for Kali Purple on VMWare Workstation, which were provided by [**@JonGoodCyber**](https://www.youtube.com/@JonGoodCyber)
 {% include embed/youtube.html id='y6s0B3LGRZw' %}
 
 ## Setting-up Elastic Stack
