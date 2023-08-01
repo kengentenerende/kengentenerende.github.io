@@ -126,8 +126,6 @@ Prepare a square image (PNG, JPG, or SVG) with a size of 512x512 or more, and th
 
 In the next step, the webpage will show all usage scenarios. You can keep the default options, scroll to the bottom of the page, and click the button <kbd>Generate your Favicons and HTML code</kbd> to generate the favicon.
 
-
-
 ## Download & Replace
 
 Download the generated package, unzip and delete the following two from the extracted files:
