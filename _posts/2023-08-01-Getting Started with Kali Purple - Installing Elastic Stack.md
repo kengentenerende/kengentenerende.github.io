@@ -71,14 +71,22 @@ Initially, refer to the comprehensive installation instructions for Kali Purple 
 
 ## Setting-up Elastic Stack
 
+In this article, I’ll walk you through the deployment of Elasticsearch SIEM (Security Information and Event Management) with Kibana on our Kali Purple.
+
+<https://gitlab.com/kalilinux/kali-purple/documentation/-/blob/main/301_kali-purple/installation.txt>
+
+
 ## 1. Install dependencies
 
-```
+```bash
 sudo apt-get install curl
 curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/elastic-archive-keyring.gpg
 echo "deb https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-8.x.list
 sudo bash -c "export HOSTNAME=kali-purple.kali.purple; apt-get install elasticsearch -y"
 ```
+
+The default username of Kibana is "elastic". Make sure also to save the passwornd which can be located under _Security AutoConfiguration Information_
+![]({{site.baseurl}}/assets/img/2023-08-01-Getting Started with Kali Purple - Installing Elastic Stack/2023-08-01-Security_AutoConfiguration_information.png){:width="100%"}
 
 [**Real Favicon Generator**](https://realfavicongenerator.net/)
 
