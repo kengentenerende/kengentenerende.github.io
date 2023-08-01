@@ -118,6 +118,37 @@ Once done, you can now start Elasticsearch and Kibana.
 sudo systemctl enable elasticsearch kibana --now
 ```
 
+# 4. Enroll Kibana
+
+To generate an Enrollment token for Kibana, execute the following command in the terminal:
+
+```bash
+sudo /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
+```
+
+Next, open a web browser and navigate to the following address:
+- http://{_internal_ip_from_step_3_}:5601
+
+You will be redirected to the enrollment page of Kibana. At this point, paste the previously generated token.
+
+![]({{site.baseurl}}/assets/img/2023-08-01-Getting Started with Kali Purple - Installing Elastic Stack/2023-08-01-Kibana_Enrollement_Page.png){: width="700" height="400"}
+
+After that, you will be prompted to enter the verification code into Kibana.
+
+![]({{site.baseurl}}/assets/img/2023-08-01-Getting Started with Kali Purple - Installing Elastic Stack/2023-08-01-Kibana_Verification_Code.png){: width="700" height="400"}
+
+To generate Verification Code for Kibana, execute the following command:
+
+```bash
+sudo /usr/share/kibana/bin/kibana-verification-code
+```
+
+Enter the default username _elastic_ along with the password generated in Step 1.
+
+
+
+
+
 [**Real Favicon Generator**](https://realfavicongenerator.net/)
 
 Prepare a square image (PNG, JPG, or SVG) with a size of 512x512 or more, and then go to the online tool [**Real Favicon Generator**](https://realfavicongenerator.net/) and click the button <kbd>Select your Favicon image</kbd> to upload your image file.
