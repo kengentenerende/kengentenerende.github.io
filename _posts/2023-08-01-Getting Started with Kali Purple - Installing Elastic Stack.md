@@ -71,7 +71,7 @@ Initially, refer to the comprehensive installation instructions for Kali Purple 
 
 ## Setting-up Elastic Stack
 
-### 1. Install dependencies
+## 1. Install dependencies
 
 ```
 sudo apt-get install curl
