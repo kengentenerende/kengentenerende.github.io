@@ -4,6 +4,8 @@ author: keng
 date: 2023-08-01  09:23:59 +0800
 categories: [Kali Purple]
 tags: [kalipurple]
+image:
+  path: assets/img/Kali-Purple-banner-2023.1-release.jpg
 ---
 
 ## What is Kali Purple?
