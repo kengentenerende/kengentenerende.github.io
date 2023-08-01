@@ -71,12 +71,12 @@ Initially, refer to the comprehensive installation instructions for Kali Purple 
 
 ## Setting-up Elastic Stack
 
-In this article, I’ll walk you through the deployment of Elasticsearch SIEM (Security Information and Event Management) with Kibana on our Kali Purple.
+In this article, I’ll walk you through the deployment of Elasticsearch SIEM (Security Information and Event Management) with Kibana on Kali Purple.
 
 <https://gitlab.com/kalilinux/kali-purple/documentation/-/blob/main/301_kali-purple/installation.txt>
 
 
-## 1. Install dependencies
+## 1. Install Dependencies
 
 ```bash
 sudo apt-get install curl
@@ -85,8 +85,24 @@ echo "deb https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee 
 sudo bash -c "export HOSTNAME=kali-purple.kali.purple; apt-get install elasticsearch -y"
 ```
 
-The default username of Kibana is "elastic". Make sure also to save the passwornd which can be located under _Security AutoConfiguration Information_
+The default username is _elastic_. Additionally, ensure that you save the password, which can be found under _Security AutoConfiguration Information_.
 ![]({{site.baseurl}}/assets/img/2023-08-01-Getting Started with Kali Purple - Installing Elastic Stack/2023-08-01-Security_AutoConfiguration_information.png){:width="100%"}
+
+## 2. Convert to Single-Node Setup
+
+```bash
+sudo sed -e '/cluster.initial_master_nodes/ s/^#*/#/' -i /etc/elasticsearch/elasticsearch.yml
+echo "discovery.type: single-node" | sudo tee -a /etc/elasticsearch/elasticsearch.yml
+```
+
+## 3. Install Kibana
+
+```bash
+sudo apt install kibana
+sudo /usr/share/kibana/bin/kibana-encryption-keys generate -q
+```
+
+
 
 [**Real Favicon Generator**](https://realfavicongenerator.net/)
 
