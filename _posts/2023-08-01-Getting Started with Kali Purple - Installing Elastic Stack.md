@@ -8,6 +8,9 @@ tags: [kalipurple]
 
 ## What is Kali Purple?
 
+![Alt text](image.png){: width="972" height="589" }
+_Full screen width and center alignment_
+
 Kali Linux, the popular Debian-based Linux distribution designed for digital forensics and penetration testing, announced a new project named [**Kali Purple**](https://gitlab.com/kalilinux/kali-purple/documentation/-/wikis/home), a distro designed for defensive security.
 
 On a high level, Kali Purple consists of:
@@ -62,7 +65,7 @@ Kali Purple Hub for the community to share:
 
 Kali Purple Discord channels for community collaboration and fun
 
-## Generate the favicon
+## Installation
 
 Prepare a square image (PNG, JPG, or SVG) with a size of 512x512 or more, and then go to the online tool [**Real Favicon Generator**](https://realfavicongenerator.net/) and click the button <kbd>Select your Favicon image</kbd> to upload your image file.
 
