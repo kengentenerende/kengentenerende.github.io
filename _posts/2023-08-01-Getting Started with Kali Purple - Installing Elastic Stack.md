@@ -6,7 +6,66 @@ categories: [Kali Purple]
 tags: [kibana,elk]
 ---
 
-The [favicons](https://www.favicon-generator.org/about/) of [**Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/) are placed in the directory `assets/img/favicons/`{: .filepath}. You may want to replace them with your own. The following sections will guide you to create and replace the default favicons.
+## What is Kali Purple?
+
+Kali Linux, the popular Debian-based Linux distribution designed for digital forensics and penetration testing, announced a new project named [**Kali Purple**](https://gitlab.com/kalilinux/kali-purple/documentation/-/wikis/home), a distro designed for defensive security.
+
+On a high level, Kali Purple consists of:
+
+Over 100 defensive tools, such as:
+
+- Arkime full packet capture
+- Cyberchef
+- Elasticsearch SIEM
+- GVM vulnerability scanner
+- TheHive incident response platform
+- Malcolm
+- Suricata IDS
+- Zeek IDS
+- and of course all the usual Kali tools
+
+
+ISOs:
+
+- Kali Purple
+- Malcolm - based on Kali
+- Hedgehog - based on Kali
+
+
+A defensive menu structure according to NIST CSF:
+
+- Identify
+- Protect
+- Detect
+- Respond
+- Recover
+
+
+A gorgeous wallpaper and theme
+A reference architecture for the ultimate SOC In-A-Box; perfect for:
+
+- Learning
+- Practicing SOC analysis and threat hunting
+- Security control design and testing
+- Blue / Red / Purple teaming exercises
+- Kali spy vs. spy competitions ( bare knuckle Blue vs. Red )
+
+
+Kali Autopilot - an attack script builder / framework for automated attacks
+Defensive tools documentations
+Wiki
+Kali Purple Hub for the community to share:
+
+- Practice pcaps
+- Kali Autopilot scripts for blue teaming exercises
+
+
+Kali Purple Discord channels for community collaboration and fun
+
+## Introduction
+
+
+The [favicons](https://www.favicon-generator.org/about/) of [**Kali Purple**](https://gitlab.com/kalilinux/kali-purple/documentation/-/wikis/home) are placed in the directory `assets/img/favicons/`{: .filepath}. You may want to replace them with your own. The following sections will guide you to create and replace the default favicons.
 
 ## Introduction
 
