@@ -102,12 +102,22 @@ sudo apt install kibana
 sudo /usr/share/kibana/bin/kibana-encryption-keys generate -q
 ```
 
-Add keys to </kbd>/etc/kibana/kibana.yml</kbd>
+Add keys to <kbd>/etc/kibana/kibana.yml</kbd>
 
 ```bash
 echo "server.host: \"kali-purple.kali.purple\"" | sudo tee -a /etc/kibana/kibana.yml
 ```
 ![]({{site.baseurl}}/assets/img/2023-08-01-Getting Started with Kali Purple - Installing Elastic Stack/2023-08-01-Add_Kibana_Key.png){:width="100%"}
+
+Ensure that kali-purple.kali.purple is only mapped to the IP address of your Kali Purple Machine in <kbd>/etc/hosts</kbd> in order to bind the Kibana interface.
+
+![]({{site.baseurl}}/assets/img/2023-08-01-Getting Started with Kali Purple - Installing Elastic Stack/2023-08-01-Bind_Internal_IP.png){:width="100%"}
+
+Once done, you can now start Elasticsearch and Kibana.
+
+```bash
+sudo systemctl enable elasticsearch kibana --now
+```
 
 [**Real Favicon Generator**](https://realfavicongenerator.net/)
 
