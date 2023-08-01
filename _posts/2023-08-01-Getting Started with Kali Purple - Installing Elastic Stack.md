@@ -143,7 +143,7 @@ To generate Verification Code for Kibana, execute the following command:
 sudo /usr/share/kibana/bin/kibana-verification-code
 ```
 
-Then, Enter the default username _elastic_ along with the password generated in Step 1. Now, you can access Elasticsearch SIEM on Kali Purple.
+Then, enter the default username _elastic_ along with the password generated in Step 1. Now, you can access Elasticsearch SIEM on Kali Purple.
 
 ![]({{site.baseurl}}/assets/img/2023-08-01-Getting Started with Kali Purple - Installing Elastic Stack/2023-08-01-Kibana_Homet_Page.png){:width="100%"}
 

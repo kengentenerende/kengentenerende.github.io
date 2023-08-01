@@ -20,7 +20,7 @@ timezone: Asia/Manila
 
 title: King Anthony Orande # the main title
 
-tagline: --- # it will display as the sub-title
+tagline: Cyber Security Consultant | Reverse Engineer | Malware Researcher | Threat Hunter # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
@@ -67,7 +67,7 @@ google_analytics:
 #     light  - Use the light color scheme
 #     dark   - Use the dark color scheme
 #
-theme_mode: light
+theme_mode: dark
 
 # The CDN endpoint for images.
 # Notice that once it is assigned, the CDN url
