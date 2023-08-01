@@ -4,7 +4,6 @@ author: keng
 date: 2023-08-01  09:23:59 +0800
 categories: [Kali Purple]
 tags: [kalipurple]
-img_path: '/assets/img'
 ---
 
 ## What is Kali Purple?
