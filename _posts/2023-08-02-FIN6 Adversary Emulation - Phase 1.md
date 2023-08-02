@@ -65,6 +65,6 @@ FIN6
 
 FIN6
 
-## Reference
+## References
 
 <https://www.offsec.com/metasploit-unleashed/msfvenom/>
