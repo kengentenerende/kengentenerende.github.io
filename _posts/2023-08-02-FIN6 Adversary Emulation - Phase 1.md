@@ -35,6 +35,7 @@ Msfvenom has a wide range of options available:
 To generate a payload, there are two flags that you must supply (`-p` and `-f`):
 
 - The `-p` flag: Specifies what payload to generate
+- The `-f` flag: Specifies the format of the payload
 
 To see what payloads are available from Framework, you can do:
 
