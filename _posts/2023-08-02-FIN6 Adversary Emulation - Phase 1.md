@@ -11,7 +11,7 @@ FIN6 is thought to be a financially motivated cyber-crime group. The group has a
 
 ## Step 1 - FIN6 Initial Access
 
-### 1.1 - Phishing: Spearphishing Attachment [**T1566.001**](https://attack.mitre.org/techniques/T1566/001/) [**T1566.003**](https://attack.mitre.org/techniques/T1566/003/)
+### 1.1 - Phishing: Spearphishing Attachment [**T1566.001**](https://attack.mitre.org/techniques/T1566/001/) and Phishing: Spearphishing via Service [**T1566.003**](https://attack.mitre.org/techniques/T1566/003/)
 
 As FIN6 appears to be monetarily motivated, they take a pragmatic approach toward delivery. FIN6 has employed social engineering ala direct messages on LinkedIn, spear-phished, compromised e-commerce sites, and it has been suggested that they have negotiated or even purchased access to previously compromised networks. 
 
