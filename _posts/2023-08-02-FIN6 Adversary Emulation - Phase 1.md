@@ -27,9 +27,7 @@ Increased speed
 
 Msfvenom has a wide range of options available:
 
-```bash
-
-```
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_MsfVenom.png){:width="100%" .shadow}
 
 ## Step 2 - FIN6 Discovery
 
