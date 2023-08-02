@@ -17,3 +17,9 @@ As FIN6 appears to be monetarily motivated, they take a pragmatic approach towar
 
 FIN6 has made use of CobaltStrike and Metasploit. Koadic C2 may be a good option to emulate the more_eggs implant.
 
+## Step 2 - FIN6 Discovery
+
+## Step 3 - FIN6 Privilege Escalation
+
+## Step 4 - FIN6 Collection and Exfiltration
+
