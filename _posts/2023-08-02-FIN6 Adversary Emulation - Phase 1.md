@@ -15,7 +15,7 @@ FIN6 is thought to be a financially motivated cyber-crime group. The group has a
 
 As FIN6 appears to be monetarily motivated, they take a pragmatic approach toward delivery. FIN6 has employed social engineering ala direct messages on LinkedIn, spear-phished, compromised e-commerce sites, and it has been suggested that they have negotiated or even purchased access to previously compromised networks. 
 
-### 1.1 - C2 Framework
+### 1.2 - C2 Framework
 
 FIN6 has made use of CobaltStrike and Metasploit. For this demonstration, we'll create initial payload using Metasploit’s [**Msfvenom**](https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-msfvenom.html).
 
@@ -30,7 +30,7 @@ Msfvenom has a wide range of options available:
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_MsfVenom.png){:width="100%"}
 
 
-### 1.2 - Generate Initial Access Payload
+### 1.3 - Generate Initial Access Payload
 
 To generate a payload, there are two flags that you must supply (`-p` and `-f`):
 
