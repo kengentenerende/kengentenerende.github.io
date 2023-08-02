@@ -64,3 +64,7 @@ FIN6
 ## Step 4 - FIN6 Collection and Exfiltration
 
 FIN6
+
+## Reference
+
+<https://www.offsec.com/metasploit-unleashed/msfvenom/>
