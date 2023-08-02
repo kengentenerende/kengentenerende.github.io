@@ -19,7 +19,38 @@ As FIN6 appears to be monetarily motivated, they take a pragmatic approach towar
 
 FIN6 has made use of CobaltStrike and Metasploit. For this demonstration, we'll create initial payload using Metasploit’s [**Msfvenom**](https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-msfvenom.html).
 
+_MSFvenom_ is a combination of Msfpayload and Msfencode, putting both of these tools into a single Framework instance. The advantages of Msfvenom are:
 
+One single tool
+Standardized command line options
+Increased speed
+
+Msfvenom has a wide range of options available:
+
+```
+Options:
+    -p, --payload            Payload to use. Specify a '-' or stdin to use custom payloads
+        --payload-options            List the payload's standard options
+    -l, --list          [type]       List a module type. Options are: payloads, encoders, nops, all
+    -n, --nopsled             Prepend a nopsled of [length] size on to the payload
+    -f, --format              Output format (use --help-formats for a list)
+        --help-formats               List available formats
+    -e, --encoder            The encoder to use
+    -a, --arch                  The architecture to use
+        --platform          The platform of the payload
+        --help-platforms             List available platforms
+    -s, --space               The maximum size of the resulting payload
+        --encoder-space       The maximum size of the encoded payload (defaults to the -s value)
+    -b, --bad-chars             The list of characters to avoid example: '\x00\xff'
+    -i, --iterations           The number of times to encode the payload
+    -c, --add-code              Specify an additional win32 shellcode file to include
+    -x, --template              Specify a custom executable file to use as a template
+    -k, --keep                       Preserve the template behavior and inject the payload as a new thread
+    -o, --out                   Save the payload
+    -v, --var-name              Specify a custom variable name to use for certain output formats
+        --smallest                   Generate the smallest possible payload
+    -h, --help                       Show this message
+```
 
 
 ## Step 2 - FIN6 Discovery
