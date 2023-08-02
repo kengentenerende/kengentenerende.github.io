@@ -1,5 +1,6 @@
 ---
 title: FIN6 Adversary Emulation - Phase 1
+date: 2023-08-02 09:23:59 +0800
 categories: [Adversary Emulation, FIN6]
 tags: [threathunt,metasploit]
 ---
