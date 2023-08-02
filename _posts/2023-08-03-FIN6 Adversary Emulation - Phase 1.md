@@ -1,8 +1,8 @@
 ---
 title: FIN6 Adversary Emulation - Phase 1
 date: 2023-08-01  09:23:59 +0800
-categories: [Kali Purple]
-tags: [kalipurple,kibana,elk]
+categories: [Adversary Emulation, FIN6]
+tags: [threathunt,metasploit]
 ---
 
 ![]({{site.baseurl}}/assets/img/Kali-Purple-banner-2023.1-release.jpg){:width="100%"}
