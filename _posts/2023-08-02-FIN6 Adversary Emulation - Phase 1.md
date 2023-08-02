@@ -9,15 +9,7 @@ tags: [threathunt,metasploit]
 
 FIN6 is thought to be a financially motivated cyber-crime group. The group has aggressively targeted and compromised high-volume POS systems in the hospitality and retail sectors since at least 2015. FIN6 has targeted e-commerce sites and multinational organizations. Most of the group’s targets have been located in the United States and Europe, but include companies in Australia, Canada, Spain, India, Kazakhstan, Serbia, and China.
 
-## Contents
-
-* [Step 1 - Initial Access](#step-1---fin6-initial-access)
-
-* [Step 2 - Discovery](#step-2---fin6-discovery)
-
-* [Step 3 - Privilege Escalation](#step-3---fin6-privilege-escalation)
-
-* [Step 4 - Collection and Exfiltration](#step-4---fin6-collection-and-exfiltration)
-
-
 ## Step 1 - FIN6 Initial Access
+
+As FIN6 appears to be monetarily motivated, they take a pragmatic approach toward delivery. FIN6 has employed social engineering ala direct messages on LinkedIn, spear-phished, compromised e-commerce sites, and it has been suggested that they have negotiated or even purchased access to previously compromised networks. FIN6 has made use of CobaltStrike and Metasploit. Koadic C2 may be a good option to emulate the more_eggs implant.
+
