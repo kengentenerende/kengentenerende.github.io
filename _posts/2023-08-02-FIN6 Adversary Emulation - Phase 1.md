@@ -32,9 +32,9 @@ Msfvenom has a wide range of options available:
 
 ### 1.2 - Generate Initial Access Payload
 
-To generate a payload, there are two flags that you must supply (-p and -f):
+To generate a payload, there are two flags that you must supply (`-p` and `-f`):
 
-- The -p flag: Specifies what payload to generate
+- The `-p` flag: Specifies what payload to generate
 
 To see what payloads are available from Framework, you can do:
 
