@@ -20,6 +20,4 @@ FIN6 is thought to be a financially motivated cyber-crime group. The group has a
 * [Step 4 - Collection and Exfiltration](#step-4---fin6-collection-and-exfiltration)
 
 
----
-
 ## Step 1 - FIN6 Initial Access
