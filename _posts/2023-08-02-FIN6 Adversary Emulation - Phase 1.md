@@ -28,7 +28,6 @@ Increased speed
 Msfvenom has a wide range of options available:
 
 ```bash
-Options:
     -p, --payload            Payload to use. Specify a '-' or stdin to use custom payloads
         --payload-options            List the payload's standard options
     -l, --list          [type]       List a module type. Options are: payloads, encoders, nops, all
