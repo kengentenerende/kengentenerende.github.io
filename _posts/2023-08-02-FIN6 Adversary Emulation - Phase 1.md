@@ -282,7 +282,7 @@ FIN6 has used has used Metasploit's named-pipe impersonation technique to escala
 To perform the FIN6 procedure, we first need to exit the PowerShell shell within our Meterpreter session, to bring us back to the `meterpreter` console.
 
 ```bash
-Ctrl+C y 
+Ctrl+C y
 ```
 
 Next, the command below assumes a meterpreter session and specifies the use of technique `1`, a named-pipe impersonation.
@@ -290,6 +290,8 @@ Next, the command below assumes a meterpreter session and specifies the use of t
 ```bash
 meterpreter > getsystem -t 1
 ```
+
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-3_1_Meterpreter_Named_Pipe_Imp.png){:width="100%"}
 
 The alternative procedure uses the PowerSploit PowerShell module, which contains a PowerShell function called `Get-System`, to also elevate privileges using the same named-pipe impersonation method.
 
