@@ -289,9 +289,6 @@ meterpreter > getsystem -t 1
 
 The alternative procedure uses the PowerSploit PowerShell module, which contains a PowerShell function called `Get-System`, to also elevate privileges using the same named-pipe impersonation method.
 
-```bash
-Get-System -ServiceName 'mstdc' -PipeName 'mstdc'
-```
 
 ## Step 4 - Collection and Exfiltration
 
