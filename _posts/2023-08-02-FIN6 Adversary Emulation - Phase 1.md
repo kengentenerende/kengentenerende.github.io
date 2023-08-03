@@ -217,7 +217,6 @@ PS > type ad_ous_ps.txt
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-2_4_AdFind_Discover_Domain_Trusts.png){:width="100%"}
 
-
 Next, FIN6 performs a full forest search for trust objects using AdFind's `trustdmp` feature:
 
 ```bash
@@ -251,6 +250,26 @@ Alternative procedure:
 PS > Get-ADReplicationSubnet -Filter * > ad_subnets_ps.txt
 PS > type ad_subnets_ps.txt
 ```
+
+### 2.5 - Permission Groups Discovery: Domain Groups [**T1069.002**](https://attack.mitre.org/techniques/T1069/002/)
+
+FIN6 can extract uses AdFind to enumerate groups in the domain and writes the output to a file.
+
+FIN6 procedure:
+
+```bash
+PS > adfind.exe -f "objectcategory=group" > ad_group.txt
+PS > type ad_group.txt
+```
+
+Alternative procedure:
+
+```bash
+PS > net group /domain > ad_group.txt
+PS > type ad_group.txt
+```
+
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-2_5_AdFind_Discover_Permission.png){:width="100%"}
 
 ## Step 3 - Privilege Escalation
 
