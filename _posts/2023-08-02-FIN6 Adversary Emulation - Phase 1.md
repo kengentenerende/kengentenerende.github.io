@@ -117,7 +117,7 @@ Start a Python3 HTTP server on port 80:
 sudo python3 -m http.server 80
 ```
 
-### 1.4 - Download Payload to Start the Communication on Exploit Handler
+### 1.5 - Download Payload to Start the Communication on Exploit Handler
 
 Switch to the victim's Server. Open a browser and navigate to to the following address to download the payload to the Desktop. Make sure to replace
 the IP address placeholder with the IP address of the attackerVM:
@@ -126,9 +126,11 @@ the IP address placeholder with the IP address of the attackerVM:
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_Download_MsfVenom_Payload.png){:width="100%"}
 
+Once downloaded, execute the payload as Administrator. Since as parts of this emulation plan, the payload requires elevated access. 
+
+Then switch back to the `msfconsole` terminal window on the attackerVM. You should see that the handler received a callback from the victim's Server, with a new meterpreter session created.
+
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_Established_MsfVenom_Payload.png){:width="100%"}
-
-
 
 ## Step 2 - FIN6 Discovery
 
