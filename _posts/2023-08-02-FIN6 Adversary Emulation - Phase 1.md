@@ -161,7 +161,7 @@ Invoke-WebRequest -Uri http://www.joeware.net/downloads/dl2.php -Method POST -Bo
 
 ### 2.2 - Account Discovery: Domain Account [**T1087.002**](https://attack.mitre.org/techniques/T1087/002/)
 
-FIN6 has used AFind to check for person objects on Active Directory, and output the results to a text file.
+FIN6 used AFind to check for person objects on Active Directory, and output the results to a text file.
 
 ```bash
 PS > adfind.exe -f "objectcategory=person" > ad_users.txt
@@ -177,9 +177,32 @@ We can use `Get-Content` `Select-String` to filter-out all of the user accounts.
 
 ```bash
 PS > Get-Content ad_users.txt | Select-String "dn:CN="
-
 ```
+
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-2_2_AdFind_Discovert_Users.png){:width="100%"}
+
+### 2.2 - Remote System Discovery [**T1018**](https://attack.mitre.org/techniques/T1018/)
+
+FIN6 also observed to perform Remote System Discovery to identify computer objects on the domain.
+
+```bash
+adfind.exe -f "objectcategory=computer" > ad_computers.txt
+```
+
+After running the command, we can view the contents of the output file with the `type` command:
+
+```bash
+PS > type ad_computers.txt
+```
+
+We can use `Get-Content` `Select-String` to filter-out all of the workstations and servers that are currently joined to the domain.
+
+```bash
+PS > Get-Content ad_computers.txt | Select-String "dn:CN="
+```
+
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-2_3_AdFind_Discover_Computer){:width="100%"}
+
 
 ## Step 3 - Privilege Escalation
 
