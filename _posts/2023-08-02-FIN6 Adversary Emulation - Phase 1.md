@@ -159,7 +159,14 @@ Invoke-WebRequest -Uri http://www.joeware.net/downloads/dl2.php -Method POST -Bo
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-2_1_AdFind_Installation_Process.png){:width="100%"}
 
-FIN6
+### 2.2 - Account Discovery: Domain Account [**T1087.002**](https://attack.mitre.org/techniques/T1087/002/)
+
+FIN6 has used AFind to check for person objects on Active Directory, and output the results to a text file.
+
+```bash
+PS > adfind.exe -f "objectcategory=person" > ad_users.txt
+```
+
 
 ## Step 3 - Privilege Escalation
 
