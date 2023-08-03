@@ -201,6 +201,8 @@ We can use `Get-Content` `Select-String` to filter-out all of the workstations a
 PS > Get-Content ad_computers.txt | Select-String "dn:CN="
 ```
 
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-2_3_AdFind_Discover_Computer.png){:width="100%"}
+
 ## Step 3 - Privilege Escalation
 
 FIN6
