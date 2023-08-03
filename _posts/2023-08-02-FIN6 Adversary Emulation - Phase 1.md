@@ -167,6 +167,19 @@ FIN6 has used AFind to check for person objects on Active Directory, and output 
 PS > adfind.exe -f "objectcategory=person" > ad_users.txt
 ```
 
+After running the command, we can view the contents of the output file with the `type` command:
+
+```bash
+PS > type ad_users.txt
+```
+
+We can use `Get-Content` `Select-String` to filter-out all of the user accounts.
+
+```bash
+PS > Get-Content ad_users.txt | Select-String "dn:CN="
+
+```
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-2_2_AdFind_Discovert_Users.png){:width="100%"}
 
 ## Step 3 - Privilege Escalation
 
