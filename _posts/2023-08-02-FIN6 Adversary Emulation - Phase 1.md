@@ -282,9 +282,7 @@ FIN6 has used has used Metasploit's named-pipe impersonation technique to escala
 To perform the FIN6 procedure, we first need to exit the PowerShell shell within our Meterpreter session, to bring us back to the `meterpreter` console.
 
 ```bash
-PS > ^C
-Terminate channel 1? [y/N]  y
-meterpreter > 
+Ctrl+C y 
 ```
 
 Next, the command below assumes a meterpreter session and specifies the use of technique `1`, a named-pipe impersonation.
