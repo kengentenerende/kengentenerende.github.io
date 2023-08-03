@@ -58,6 +58,8 @@ Normally, you can use exploit/multi/handler this way:
 
 ```bash
 msf6 > use exploit/multi/handler
+[*] Using configured payload generic/shell_reverse_tcp
+msf6 exploit(multi/handler) > 
 ```
 
 ## Step 2 - FIN6 Discovery
