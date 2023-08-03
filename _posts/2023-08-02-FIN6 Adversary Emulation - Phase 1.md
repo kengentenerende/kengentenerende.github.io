@@ -217,6 +217,23 @@ PS > type ad_ous_ps.txt
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-2_4_AdFind_Discover_Domain_Trusts.png){:width="100%"}
 
+
+Next, FIN6 performs a full forest search for trust objects using AdFind's `trustdmp` feature.
+
+```bash
+PS > adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt
+PS > type ad_trustdmp.txt
+```
+
+Alternative procedure:
+
+```bash
+PS > nltest /domain_trusts > ad_trustdmp_nltest.txt
+PS > type ad_trustdmp_nltest.txt
+```
+
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-2_4_AdFind_Discover_Domain_Trust_Forest.png){:width="100%"}
+
 ## Step 3 - Privilege Escalation
 
 FIN6
