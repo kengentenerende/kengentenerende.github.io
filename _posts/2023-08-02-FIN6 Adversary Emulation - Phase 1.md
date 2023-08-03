@@ -293,8 +293,6 @@ Next, the command below assumes a meterpreter session and specifies the use of t
 meterpreter > getsystem -t 1
 ```
 
-
-
 The alternative procedure uses the PowerSploit PowerShell module, which contains a PowerShell function called `Get-System`, to also elevate privileges using the same named-pipe impersonation method.
 
 ```bash
