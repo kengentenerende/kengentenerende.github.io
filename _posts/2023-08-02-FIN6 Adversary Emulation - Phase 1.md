@@ -297,6 +297,8 @@ meterpreter > load kiwi
 meterpreter > creds_all
 ```
 
+FIN6
+
 ## Step 4 - Collection and Exfiltration
 
 FIN6
