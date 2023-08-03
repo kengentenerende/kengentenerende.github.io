@@ -314,7 +314,7 @@ Once done, restart the victim's server and re-execute the Mimikatz command earli
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-3_2_Meterpreter_Mimikatz_With_Password.png){:width="100%"}
 
-next
+FIN6
 
 ## Step 4 - Collection and Exfiltration
 
