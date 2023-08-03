@@ -132,6 +132,8 @@ Then switch back to the `msfconsole` terminal window on the attackerVM. You shou
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_Established_MsfVenom_Payload.png){:width="100%"}
 
+FIN6
+
 ## Step 2 - FIN6 Discovery
 
 FIN6
