@@ -94,6 +94,8 @@ Once done, you should now have a similar configuration on the screenshot below.
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_MsfConsole_Final_Show_Options.png){:width="100%"}
 
+Next
+
 
 ## Step 2 - FIN6 Discovery
 
