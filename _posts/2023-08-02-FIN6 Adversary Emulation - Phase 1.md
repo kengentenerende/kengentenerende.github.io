@@ -12,7 +12,7 @@ mermaid: true
 
 FIN6 is thought to be a financially motivated cyber-crime group. The group has aggressively targeted and compromised high-volume POS systems in the hospitality and retail sectors since at least 2015. FIN6 has targeted e-commerce sites and multinational organizations. Most of the group’s targets have been located in the United States and Europe, but include companies in Australia, Canada, Spain, India, Kazakhstan, Serbia, and China.
 
-## Step 1 - FIN6 Initial Access
+## Step 1 - Initial Access
 
 ### 1.1 - Phishing: Spearphishing Attachment [**T1566.001**](https://attack.mitre.org/techniques/T1566/001/) and via Service [**T1566.003**](https://attack.mitre.org/techniques/T1566/003/)
 
@@ -134,15 +134,15 @@ Then switch back to the `msfconsole` terminal window on the attackerVM. You shou
 
 FIN6
 
-## Step 2 - FIN6 Discovery
+## Step 2 - Discovery
 
 FIN6
 
-## Step 3 - FIN6 Privilege Escalation
+## Step 3 - Privilege Escalation
 
 FIN6
 
-## Step 4 - FIN6 Collection and Exfiltration
+## Step 4 - Collection and Exfiltration
 
 FIN6
 
