@@ -298,6 +298,7 @@ meterpreter > load kiwi
 meterpreter > creds_all
 ```
 
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-3_2_Meterpreter_Mimikatz_No_Password.png){:width="100%"}
 
 Note the password field is null.
 
