@@ -129,8 +129,6 @@ Then switch back to the `msfconsole` terminal window on the attackerVM. You shou
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_Established_MsfVenom_Payload.png){:width="100%"}
 
-FIN6
-
 ## Step 2 - Discovery
 
 After gaining access to the target network, FIN6 enumerates the network and Active Directory (AD) environment. The second objective is to conduct internal reconnaissance. The intent of Discovery is to identify opportunities for escalation, lateral movement, systems for staging, and systems of interest for the effects phase of the emulation. 
@@ -270,6 +268,8 @@ PS > type ad_group.txt
 ```
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-2_5_AdFind_Discover_Permission.png){:width="100%"}
+
+FIN6
 
 ## Step 3 - Privilege Escalation
 
