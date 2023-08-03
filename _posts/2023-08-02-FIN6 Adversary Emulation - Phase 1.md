@@ -74,6 +74,8 @@ To check the current configuration of the payload handler, we can use the comman
 msf6 exploit(multi/handler) > show options
 ```
 
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_MsfConsole_Show_Options.png){:width="100%"}
+
 We now need to configure the payload and exploit appropriately, so the Meterpreter shell can connect back to our attackerVM machine. Let’s list the various options for the payload and exploit using show options:
 
 ## Step 2 - FIN6 Discovery
