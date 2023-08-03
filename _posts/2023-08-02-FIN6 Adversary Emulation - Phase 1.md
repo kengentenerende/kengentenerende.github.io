@@ -54,12 +54,6 @@ Below is the typical syntax to use msfvenom:
 
 With our payload ready, we need a handler to accept the connection back from our target. We will use the `exploit/multi/handler` metasploit module.
 
-```
-Module: exploit/multi/handler
-Source code: modules/exploits/multi/handler.rb
-Supported architecture(s): x86, x86_64, x64, mips, mipsle, mipsbe, mips64, mips64le, ppc, ppce500v2, ppc64, ppc64le, cbea, cbea64, sparc, sparc64, armle, armbe, aarch64, cmd, php, tty, java, ruby, dalvik, python, nodejs, firefox, zarch, r
-Supported platform(s): Android, Apple_iOS, BSD, Java, JavaScript, Linux, Mainframe, Multi, NodeJS, OSX, PHP, Python, Ruby, Solaris, Unix, Windows
-```
 Normally, you can use exploit/multi/handler this way:
 
 ```bash
