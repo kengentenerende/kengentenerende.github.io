@@ -287,6 +287,15 @@ Next, the command below assumes a meterpreter session and specifies the use of t
 meterpreter > getsystem -t 1
 ```
 
+### 3.2 - OS Credential Dumping: LSASS Memory [**T1003.001**](https://attack.mitre.org/techniques/T1003/001/)
+
+Reporting indicates that FIN6 has used Mimikatz on several occasions. While there are many variations of the tool, FIN6 has to date, favored the use of Metasploit and CobaltStrike for post-exploitation. As such, the recommended procedure specifies using Mimikatz from a Meterpreter session. This of course, requires a Meterpreter session and elevated privileges. The commands below load Mimikatz into memory and attempt to retrieve `wdigest` credentials.
+
+```bash
+meterpreter > load kiwi
+meterpreter > creds_all
+```
+
 ## Step 4 - Collection and Exfiltration
 
 FIN6
