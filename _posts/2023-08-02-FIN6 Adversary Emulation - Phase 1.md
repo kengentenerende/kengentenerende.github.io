@@ -249,7 +249,7 @@ PS > Get-ADReplicationSubnet -Filter * > ad_subnets_ps.txt
 PS > type ad_subnets_ps.txt
 ```
 
-### 2.5 - Permission Groups Discovery: Domain Groups [**T1069.002**](https://attack.mitre.org/techniques/T1069/002/)
+### 2.6 - Permission Groups Discovery: Domain Groups [**T1069.002**](https://attack.mitre.org/techniques/T1069/002/)
 
 FIN6 can extract uses AdFind to enumerate groups in the domain and writes the output to a file.
 
@@ -273,7 +273,26 @@ FIN6
 
 ## Step 3 - Privilege Escalation
 
-FIN6
+The third objective is to escalate privileges. Again, in this regard, FIN6 has taken a pragmatic approach. Reporting suggests the group has purchased credentials, made heavy use of credential access, and used the "getsystem" modules included in publicly available penetration testing frameworks. FIN6 has been reported to further compromise the Windows domain by copying and exfiltrating the Active Directory database (NTDS.dit) file. The information therein enables the group to move freely throughout the domain and pursue their operational objectives.
+
+### 3.1 - Access Token Manipulation [**T1134**](https://attack.mitre.org/techniques/T1134/)
+
+FIN6 has used has used Metasploit's named-pipe impersonation technique to escalate privileges. 
+
+To perform the FIN6 procedure, we first need to exit the PowerShell shell within our Meterpreter session, to bring us back to the `meterpreter` console.
+
+```bash
+PS > ^C
+Terminate channel 1? [y/N]  y
+meterpreter > 
+```
+
+Next, the command below assumes a meterpreter session and specifies the use of technique 1, a named-pipe impersonation.
+
+```bash
+meterpreter > getsystem -t 1
+```
+
 
 ## Step 4 - Collection and Exfiltration
 
