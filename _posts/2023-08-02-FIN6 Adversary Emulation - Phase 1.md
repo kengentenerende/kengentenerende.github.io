@@ -238,7 +238,7 @@ PS > type ad_trustdmp_nltest.txt
 
 FIN6 can extract subnet information from Active Directory. It performs System Network Configuration Discovery to list subnets information within the network. As the target network consists of just 1 host, there will not be much information returned from this procedure.
 
-Next, FIN6 performs a full forest search for trust objects using AdFind's `trustdmp` feature:
+FIN6 Procedure:
 
 ```bash
 PS > adfind.exe -subnets -f "objectcategory=subnet" > ad_subnets.txt
