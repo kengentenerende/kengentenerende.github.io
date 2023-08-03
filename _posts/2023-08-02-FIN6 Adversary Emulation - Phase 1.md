@@ -179,7 +179,7 @@ We can use `Get-Content` `Select-String` to filter-out all of the user accounts.
 PS > Get-Content ad_users.txt | Select-String "dn:CN="
 ```
 
-![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-2_2_AdFind_Discovert_Users.png){:width="100%"}
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-2_2_AdFind_Discover_Users.png){:width="100%"}
 
 ### 2.2 - Remote System Discovery [**T1018**](https://attack.mitre.org/techniques/T1018/)
 
@@ -201,7 +201,7 @@ We can use `Get-Content` `Select-String` to filter-out all of the workstations a
 PS > Get-Content ad_computers.txt | Select-String "dn:CN="
 ```
 
-![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-2_3_AdFind_Discover_Computer.png){:width="100%"}
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-2_3_AdFind_Discover_Computers.png){:width="100%"}
 
 FIN6
 
