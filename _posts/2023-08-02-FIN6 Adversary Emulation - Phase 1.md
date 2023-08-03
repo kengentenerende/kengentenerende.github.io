@@ -293,7 +293,7 @@ Next, the command below assumes a meterpreter session and specifies the use of t
 meterpreter > getsystem -t 1
 ```
 
-![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-3_1_Meterpreter_Named_Pipe_Imp.png){:width="100%"}
+
 
 The alternative procedure uses the PowerSploit PowerShell module, which contains a PowerShell function called `Get-System`, to also elevate privileges using the same named-pipe impersonation method.
 
