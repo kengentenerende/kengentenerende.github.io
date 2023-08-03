@@ -293,6 +293,7 @@ Next, the command below assumes a meterpreter session and specifies the use of t
 meterpreter > getsystem -t 1
 ```
 
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-3_1_Meterpreter_Named_Pipe_Imp.png){:width="100%"}
 
 ## Step 4 - Collection and Exfiltration
 
