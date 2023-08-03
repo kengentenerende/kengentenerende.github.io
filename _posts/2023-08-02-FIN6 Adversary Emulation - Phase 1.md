@@ -199,7 +199,7 @@ PS > Get-Content ad_computers.txt | Select-String "dn:CN="
 
 ### 2.4 - Domain Trust Discovery [**T1482**](https://attack.mitre.org/techniques/T1482/)
 
-FIN6 can gather information about organizational units (OUs) and domain trusts from Active Directory using 2 separate procedures.
+FIN6 can gather information about organizational units (OUs) and domain trusts from Active Directory using two separate procedures.
 
 First FIN6 enumerates all Organizational Units in the current user’s domain:
 
@@ -218,7 +218,7 @@ PS > type ad_ous_ps.txt
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-2_4_AdFind_Discover_Domain_Trusts.png){:width="100%"}
 
 
-Next, FIN6 performs a full forest search for trust objects using AdFind's `trustdmp` feature.
+Next, FIN6 performs a full forest search for trust objects using AdFind's `trustdmp` feature:
 
 ```bash
 PS > adfind.exe -gcb -sc trustdmp > ad_trustdmp.txt
@@ -233,6 +233,24 @@ PS > type ad_trustdmp_nltest.txt
 ```
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-2_4_AdFind_Discover_Domain_Trust_Forest.png){:width="100%"}
+
+### 2.5 - System Network Configuration Discovery [**T1016**](https://attack.mitre.org/techniques/T1016/)
+
+FIN6 can extract subnet information from Active Directory. It performs System Network Configuration Discovery to list subnets information within the network. As the target network consists of just 1 host, there will not be much information returned from this procedure.
+
+Next, FIN6 performs a full forest search for trust objects using AdFind's `trustdmp` feature:
+
+```bash
+PS > adfind.exe -subnets -f "objectcategory=subnet" > ad_subnets.txt
+PS > type ad_subnets.txt
+```
+
+Alternative procedure:
+
+```bash
+PS > Get-ADReplicationSubnet -Filter * > ad_subnets_ps.txt
+PS > type ad_subnets_ps.txt
+```
 
 ## Step 3 - Privilege Escalation
 
