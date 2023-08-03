@@ -159,6 +159,8 @@ Invoke-WebRequest -Uri http://www.joeware.net/downloads/dl2.php -Method POST -Bo
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-2.1_AdFind_Installation_Process.png){:width="100%"}
 
+FIN6
+
 ## Step 3 - Privilege Escalation
 
 FIN6
