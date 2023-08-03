@@ -181,21 +181,15 @@ PS > Get-Content ad_users.txt | Select-String "dn:CN="
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-2_2_AdFind_Discover_Users.png){:width="100%"}
 
-### 2.2 - Remote System Discovery [**T1018**](https://attack.mitre.org/techniques/T1018/)
+### 2.3 - Remote System Discovery [**T1018**](https://attack.mitre.org/techniques/T1018/)
 
 FIN6 also observed to perform Remote System Discovery to identify computer objects on the domain.
 
 ```bash
-adfind.exe -f "objectcategory=computer" > ad_computers.txt
+PS > adfind.exe -f "objectcategory=computer" > ad_computers.txt
 ```
 
-After running the command, we can view the contents of the output file with the `type` command:
-
-```bash
-PS > type ad_computers.txt
-```
-
-We can use `Get-Content` `Select-String` to filter-out all of the workstations and servers that are currently joined to the domain.
+After running the command, we can use `Get-Content` `Select-String` to filter-out all of the workstations and servers that are currently joined to the domain.
 
 ```bash
 PS > Get-Content ad_computers.txt | Select-String "dn:CN="
@@ -203,7 +197,25 @@ PS > Get-Content ad_computers.txt | Select-String "dn:CN="
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-2_3_AdFind_Discover_Computers.png){:width="100%"}
 
-FIN6
+### 2.4 - Domain Trust Discovery [**T1482**](https://attack.mitre.org/techniques/T1482/)
+
+FIN6 can gather information about organizational units (OUs) and domain trusts from Active Directory using 2 separate procedures.
+
+First FIN6 enumerates all Organizational Units in the current user’s domain:
+
+```bash
+PS > adfind.exe -f "objectcategory=organizationalUnit" > ad_ous.txt
+PS > Get-Content ad_ous.txt | Select-String "dn:OU="
+```
+
+Alternative procedure:
+
+```bash
+PS > Get-ADOrganizationalUnit -Filter 'Name -like "*"' | Format-Table Name, DistinguishedName -A > ad_ous_ps.txt
+PS > type ad_ous_ps.txt
+```
+
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-2_4_AdFind_Discover_Domain_Trusts.png){:width="100%"}
 
 ## Step 3 - Privilege Escalation
 
