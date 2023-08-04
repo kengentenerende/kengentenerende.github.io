@@ -82,7 +82,7 @@ As youn can see, the payload is currently set to default <kbd>generic/shell_reve
 msf6 exploit(multi/handler) > set payload windows/x64/meterpreter/reverse_tcp
 ```
 
-Aside from that, we can also see that LHOST needs to be set. We don’t need to set LPORT because it already matches the option we set for the payload.
+Aside from that, we can also see that `LHOST` needs to be set. We don’t need to set LPORT because it already matches the option we set for the payload.
 
 We can set the LHOST option with the following command:
 
@@ -279,7 +279,7 @@ The third objective is to escalate privileges. Again, in this regard, FIN6 has t
 
 FIN6 has used has used Metasploit's named-pipe impersonation technique to escalate privileges. 
 
-To perform the FIN6 procedure, we first need to exit the PowerShell shell within our Meterpreter session, to bring us back to the `meterpreter` console.
+To perform the FIN6 procedure, we first need to exit the PowerShell shell within our Meterpreter session, to bring us back to the <kbd>meterpreter></kbd> console.
 
 Next, the command below assumes a meterpreter session and specifies the use of technique `1`, a named-pipe impersonation.
 
