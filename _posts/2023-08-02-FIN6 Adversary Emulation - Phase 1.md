@@ -353,6 +353,14 @@ For us to have a clear understanding on how this module work, lets take a look o
           vscpath = make_volume_shadow_copy(createvsc, text, bat)
 ```
 
+Base on the source code, the module will execute the following command:
+
+```console
+vssadmin create shadow /For=%SYSTEMDRIVE%
+```
+
+This command will generate Volume Shadow Copy on the Systemn Drive. A Volume Shadow Copy is a snapshot of a set of files, which can be accessed to copy files even when the originals are currently being used by Windows.
+
 FIN6
 
 ## Step 4 - Collection and Exfiltration
