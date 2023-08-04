@@ -455,7 +455,6 @@ Now, let's get back to the meterpreter> console and load powershell module:
 
 ```bash
 meterpreter > load powershell
-Loading extension powershell...Success.
 meterpreter > powershell_shell
 ```
 
