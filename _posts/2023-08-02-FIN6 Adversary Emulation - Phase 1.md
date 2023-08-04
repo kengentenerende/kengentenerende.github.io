@@ -194,7 +194,7 @@ FIN6 has been observed conducting Remote System Discovery as part of their recon
 PS > adfind.exe -f "objectcategory=computer" > ad_computers.txt
 ```
 
-After running the command, we can use `Get-Content` `Select-String` to filter-out all of the workstations and servers that are currently joined to the domain.
+After obtaining the output file, you can use `Get-Content` in combination with `Select-String` in PowerShell to filter-out all of the workstations and servers that are currently joined to the domain.
 
 ```ps
 PS > Get-Content ad_computers.txt | Select-String "dn:CN="
