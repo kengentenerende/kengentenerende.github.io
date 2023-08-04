@@ -451,13 +451,11 @@ service ssh start
 service ssh status
 ```
 
-Now, let's get back to the <kb>meterpreter></kb> console and load <kb>powershell</kb> module:
-
-```bash
-meterpreter > load powershell
-meterpreter > powershell_shell
-```
-
+FIN6
+FIN6
+FIN6
+FIN6
+FIN6
 FIN6
 
 ## References
