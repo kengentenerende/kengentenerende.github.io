@@ -120,23 +120,23 @@ sudo python3 -m http.server 80
 
 ### 1.5 - Download Payload to Start the Communication on Exploit Handler
 
-Switch to the victim's Server. Open a browser and navigate to to the attackerVM IP address to download the payload to the Desktop.
+Switch to the victim's Server, then use a web browser to access the attacker's VM IP address and download the payload.
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_Download_MsfVenom_Payload.png){:width="100%"}
 
-Once downloaded, execute the payload as Administrator. Since as parts of this emulation plan, the payload requires elevated access. 
+After downloading the payload, execute it with Administrator privileges on the victim's server. As part of this emulation plan, the payload necessitates elevated access to function properly.
 
-Then switch back to the `msfconsole` terminal window on the attackerVM. You should see that the handler received a callback from the victim's Server, with a new meterpreter session created.
+Then switch back to the <kbd>msfconsole</kbd> terminal window on the attackerVM. You should see that the handler received a callback from the victim's Server, with a new meterpreter session created.
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_Established_MsfVenom_Payload.png){:width="100%"}
 
 ## Step 2 - Discovery
 
-After gaining access to the target network, FIN6 enumerates the network and Active Directory (AD) environment. The second objective is to conduct internal reconnaissance. The intent of Discovery is to identify opportunities for escalation, lateral movement, systems for staging, and systems of interest for the effects phase of the emulation. 
+After gaining access to the target network, FIN6 enumerates the network and Active Directory (AD) environment. The second objective is to conduct internal reconnaissance. The intent of Discovery is to identify opportunities for escalation, lateral movement, systems for staging, and systems of interest for the effects phase of the emulation
 
 ### 2.1 - Software: AdFind [**S0552**](https://attack.mitre.org/software/S0552/)
 
-FIN6 is believed to have used ADFind for this purpose on at least one occasion. 
+Indeed, FIN6 is suspected to have utilized a tool called ADFind for performing network and Active Directory (AD) enumeration on at least one occasion. ADFind is a command-line utility used to search and query Active Directory environments. By employing this tool, FIN6 can efficiently gather information about users, groups, computers, organizational units, and other objects within the AD infrastructure, enabling them to gain valuable insights for their malicious activities and further advance their attack objectives.
 
 [**AdFind**](https://www.joeware.net/freetools/tools/adfind/) is a free command-line query tool that can be used for gathering information from Active Directory.
 
