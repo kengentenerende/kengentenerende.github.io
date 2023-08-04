@@ -115,6 +115,12 @@ cd /path/to/folder
 Start the HTTP server in the same terminal tab by using a command like python if you have Python installed:
 
 ```bash
+sudo python3 -m http.server 80
+```
+
+or <kbd>http.server</kbd> if you are using Python 3:
+
+```bash
 sudo python3 -m http.server 8080
 ```
 
@@ -188,7 +194,7 @@ FIN6 has been observed conducting Remote System Discovery as part of their recon
 PS > adfind.exe -f "objectcategory=computer" > ad_computers.txt
 ```
 
-After obtaining the output file, you can use `Get-Content` in combination with `Select-String` in PowerShell to filter-out all of the workstations and servers that are currently joined to the domain.
+After running the command, we can use `Get-Content` `Select-String` to filter-out all of the workstations and servers that are currently joined to the domain.
 
 ```ps
 PS > Get-Content ad_computers.txt | Select-String "dn:CN="
