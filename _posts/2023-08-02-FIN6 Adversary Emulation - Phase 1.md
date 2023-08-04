@@ -159,7 +159,7 @@ Invoke-WebRequest -Uri http://www.joeware.net/downloads/dl2.php -Method POST -Bo
 
 ### 2.2 - Account Discovery: Domain Account [**T1087.002**](https://attack.mitre.org/techniques/T1087/002/)
 
-FIN6 used AFind to check for person objects on Active Directory, and output the results to a text file.
+FIN6 used AdFind to check for person objects on Active Directory, and output the results to a text file.
 
 ```ps
 PS > adfind.exe -f "objectcategory=person" > ad_users.txt
@@ -409,11 +409,21 @@ copy [shadow_copy_name]\windows\system32\config\SYSTEM .\ad_SYSTEM_cfg
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-3_3_Meterpreter_PSEXEC_HIVE_Copy.png){:width="100%"}
 
-FIN6
-
 ## Step 4 - Collection and Exfiltration
 
-FIN6
+After conducting internal discovery, FIN6 has been reported to stage the resulting files, compress those files, and typically exfiltrate using SSH.
+
+### 4.1 - Archive Collected Data: Archive via Utility [**T1560.001**](https://attack.mitre.org/techniques/T1560/001/)
+
+FIN6 uses its renamed version of 7zip (7.exe), on the designated staging system, to compress the text files resulting from internal discovery. 
+
+The following command adds the ad_* text files to the ad.7z archive and performs a level 3 compression:
+
+```ps
+PS > .\7.exe a -mx3 ad.7z ad_*
+```
+
+
 
 ## References
 
