@@ -324,7 +324,7 @@ Hashes must be retrieved from the NTDS.dit file. There are a number of openly av
 msf> use auxiliary/admin/smb/psexec_ntdsgrab
 ```
 
-```bash
+```rb
   def run
     # Initialize some variables
     text = "\\#{datastore['WINPATH']}\\Temp\\#{Rex::Text.rand_text_alpha(16)}.txt"
