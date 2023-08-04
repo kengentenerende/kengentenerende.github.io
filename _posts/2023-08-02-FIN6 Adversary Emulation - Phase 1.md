@@ -324,7 +324,7 @@ msf> use auxiliary/admin/smb/psexec_ntdsgrab
 
 For us to have a clear understanding on how this module work, lets take a look on its [**source code**](https://github.com/rapid7/metasploit-framework/blob/4ebf4fd52e2754ecee163d63b5dbf86436a3fbf7/modules/auxiliary/admin/smb/psexec_ntdsgrab.rb)
 
-```bash
+```ps
   def run
     # Initialize some variables
     text = "\\#{datastore['WINPATH']}\\Temp\\#{Rex::Text.rand_text_alpha(16)}.txt"
