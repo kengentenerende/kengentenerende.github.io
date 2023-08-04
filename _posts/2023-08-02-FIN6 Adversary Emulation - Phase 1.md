@@ -375,6 +375,8 @@ vssadmin create shadow /For=%SYSTEMDRIVE%
 
 This command will generate Volume Shadow Copy on the Systemn Drive. A Volume Shadow Copy is a snapshot of a set of files, which can be accessed to copy files even when the originals are currently being used by Windows.
 
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-3_3_Meterpreter_PSEXEC_VolumeShadowCopy.png){:width="100%"}
+
 Going back to the source code of this module, we access and make a copy of the NTDS.dit since we have the Shadow Copy Name:
 
 ```rb
