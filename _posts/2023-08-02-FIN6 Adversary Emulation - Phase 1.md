@@ -439,8 +439,7 @@ Alternatively, we can use another PuTTY SSH module called PSCP. PSCP (PuTTY Secu
 But before that, we need to check if SSH port is already open our the AttackerVM:
 
 ```bash
-┌──(root㉿kali)-[/home/kali]
-└─# nmap -sV 192.168.111.165 [Attacker IP]
+nmap -sV [Attacker IP]
 ```
 
 Based on the Nmap scan, we can see that we only one open port which is the HTTP server that we have created earlier.
