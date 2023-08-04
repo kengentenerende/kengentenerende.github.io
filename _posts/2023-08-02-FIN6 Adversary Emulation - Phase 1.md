@@ -139,7 +139,7 @@ FIN6 is believed to have used ADFind for this purpose on at least one occasion.
 
 [**AdFind**](https://www.joeware.net/freetools/tools/adfind/) is a free command-line query tool that can be used for gathering information from Active Directory.
 
-On the `meterpreter` terminal, we will use PowerShell session instead to download AdFind on Windows directory. To enable PowerShell session, run the following commands:
+On the <kbd>meterpreter></kbd> terminal, we will use PowerShell session instead to download AdFind on Windows directory. To enable PowerShell session, run the following commands:
 
 ```bash
 meterpreter > load powershell
@@ -273,7 +273,7 @@ FIN6
 
 ## Step 3 - Privilege Escalation
 
-The third objective is to escalate privileges. Again, in this regard, FIN6 has taken a pragmatic approach. Reporting suggests the group has purchased credentials, made heavy use of credential access, and used the "getsystem" modules included in publicly available penetration testing frameworks. FIN6 has been reported to further compromise the Windows domain by copying and exfiltrating the Active Directory database (NTDS.dit) file. The information therein enables the group to move freely throughout the domain and pursue their operational objectives.
+The third objective is to escalate privileges. Again, in this regard, FIN6 has taken a pragmatic approach. Reporting suggests the group has purchased credentials, made heavy use of credential access, and used the `getsystem` modules included in publicly available penetration testing frameworks. FIN6 has been reported to further compromise the Windows domain by copying and exfiltrating the Active Directory database (NTDS.dit) file. The information therein enables the group to move freely throughout the domain and pursue their operational objectives.
 
 ### 3.1 - Access Token Manipulation [**T1134**](https://attack.mitre.org/techniques/T1134/)
 
@@ -316,7 +316,7 @@ Once done, restart the victim's server and re-execute the Mimikatz command earli
 
 ### 3.3 - OS Credential Dumping: NTDS [**T1003.003**](https://attack.mitre.org/techniques/T1003/003/)
 
-FIN6 has used Metasploit’s PsExec NTDSGRAB module to obtain a copy of the victim's Active Directory database. This module authenticates to the domain controller, creates a volume shadow copy of the system drive, and downloads copies of the NTDS.dit and SYSTEM hive. Although this technique is herein classified as a privilege escalation technique, the group may execute this module during discovery and exfiltrate the resultant files with the rest of their discovery results.
+FIN6 has used Metasploit’s PsExec <kb>NTDSGRAB</kb> module to obtain a copy of the victim's Active Directory database. This module authenticates to the domain controller, creates a volume shadow copy of the system drive, and downloads copies of the _NTDS.dit_ and SYSTEM hive. Although this technique is herein classified as a privilege escalation technique, the group may execute this module during discovery and exfiltrate the resultant files with the rest of their discovery results.
 
 ```bash
 msf> use auxiliary/admin/smb/psexec_ntdsgrab
@@ -377,7 +377,7 @@ This command will generate Volume Shadow Copy on the Systemn Drive. A Volume Sha
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-3_3_Meterpreter_PSEXEC_VolumeShadowCopy.png){:width="100%"}
 
-Going back to the source code of this module, we can see that we can now access and make a copy of the NTDS.dit since we have the Shadow Copy Name:
+Going back to the source code of this module, we can see that we can now access and make a copy of the _NTDS.dit_ since we have the `Shadow Copy Name`:
 
 ```rb
   # Copy ntds.dit from the Volume Shadow copy to the Windows Temp directory on the target host
@@ -392,7 +392,7 @@ Going back to the source code of this module, we can see that we can now access 
       return true
 ```
 
-To make a copy of the NTDS.dit file from the Shadow Copy, execute the following command:
+To make a copy of the _NTDS.dit_ file from the Shadow Copy, execute the following command:
 
 ```bash
 copy [shadow_copy_name]\windows\ntds\ntds.dit .\ad_ntds.dit
@@ -400,7 +400,7 @@ copy [shadow_copy_name]\windows\ntds\ntds.dit .\ad_ntds.dit
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-3_3_Meterpreter_PSEXEC_NTDS_Copy.png){:width="100%"}
 
-Aside from that, we can also use the Shadow Copy Name to access the SYSTEM registry hive and SYSTEM configuration file by executing the following command:
+Aside from that, we can also use the `Shadow Copy Name` to access the SYSTEM registry hive and SYSTEM configuration file by executing the following command:
 
 ```bash
 reg SAVE HKLM\SYSTEM .\ad_SYS_reg
