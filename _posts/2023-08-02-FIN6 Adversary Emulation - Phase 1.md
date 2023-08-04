@@ -471,7 +471,6 @@ meterpreter > shell
 ```
 
 FIN6
-FIN6
 
 ## References
 
