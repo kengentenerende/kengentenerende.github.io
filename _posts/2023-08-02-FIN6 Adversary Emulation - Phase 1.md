@@ -353,6 +353,8 @@ msf> use auxiliary/admin/smb/psexec_ntdsgrab
           vscpath = make_volume_shadow_copy(createvsc, text, bat)
 ```
 
+FIN6
+
 ## Step 4 - Collection and Exfiltration
 
 FIN6
