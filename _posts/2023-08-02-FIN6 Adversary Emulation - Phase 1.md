@@ -115,7 +115,7 @@ cd /path/to/folder
 Start the HTTP server in the same terminal tab by using a command like python if you have Python installed:
 
 ```bash
-sudo python -m SimpleHTTPServer 8080
+sudo python -m SimpleHTTPServer 80
 ```
 
 or <kbd>http.server</kbd> if you are using Python 3:
