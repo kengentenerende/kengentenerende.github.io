@@ -369,7 +369,7 @@ For us to have a clear understanding on how this module work, lets take a look o
 
 Base on the source code, the module will execute the following command:
 
-```console
+```bash
 vssadmin create shadow /For=%SYSTEMDRIVE%
 ```
 
