@@ -314,7 +314,14 @@ Once done, restart the victim's server and re-execute the Mimikatz command earli
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-3_2_Meterpreter_Mimikatz_With_Password.png){:width="100%"}
 
-FIN6
+### 3.3 - OS Credential Dumping: NTDS [**T1003.003**](https://attack.mitre.org/techniques/T1003/003/)
+
+	
+FIN6 has used Metasploit’s PsExec NTDSGRAB module to obtain a copy of the victim's Active Directory database. This module authenticates to the domain controller, creates a volume shadow copy of the system drive, and downloads copies of the NTDS.dit and SYSTEM hive. Although this technique is herein classified as a privilege escalation technique, the group may execute this module during discovery and exfiltrate the resultant files with the rest of their discovery results.
+
+Hashes must be retrieved from the NTDS.dit file. There are a number of openly available tools that are capable of parsing this file, DSInternals is one such tool. As this step is done locally and offline, the choice is left to the analyst.
+
+msf> use auxiliary/admin/smb/psexec_ntdsgrab
 
 ## Step 4 - Collection and Exfiltration
 
