@@ -237,7 +237,7 @@ FIN6 can extract subnet information from Active Directory. It performs System Ne
 
 FIN6 Procedure:
 
-```ps
+```ps1
 PS > adfind.exe -subnets -f "objectcategory=subnet" > ad_subnets.txt
 PS > type ad_subnets.txt
 ```
