@@ -492,10 +492,10 @@ Once executed, type `y` to store and cache the key of the AttackerVM and then ty
 
 ## References
 
-<https://github.com/center-for-threat-informed-defense/adversary_emulation_library/blob/master/fin6/Emulation_Plan/Phase1.md>
-<https://github.com/maddev-engenuity/AdversaryEmulation/tree/main>
-<https://www.offsec.com/metasploit-unleashed/msfvenom/>
-<https://www2.fireeye.com/rs/848-DID-242/images/rpt-fin6.pdf>
-<https://www.baeldung.com/linux/transfer-file-windows-to-linux>
-<https://exchange.xforce.ibmcloud.com/threat-group/f8409554b71a79792ff099081bc5ac24>
-<https://www2.fireeye.com/rs/848-DID-242/images/rpt-fin6.pdf>
+- <https://github.com/center-for-threat-informed-defense/adversary_emulation_library/blob/master/fin6/Emulation_Plan/Phase1.md>
+- <https://github.com/maddev-engenuity/AdversaryEmulation/tree/main>
+- <https://www.offsec.com/metasploit-unleashed/msfvenom/>
+- <https://www2.fireeye.com/rs/848-DID-242/images/rpt-fin6.pdf>
+- <https://www.baeldung.com/linux/transfer-file-windows-to-linux>
+- <https://exchange.xforce.ibmcloud.com/threat-group/f8409554b71a79792ff099081bc5ac24>
+- <https://www2.fireeye.com/rs/848-DID-242/images/rpt-fin6.pdf>
