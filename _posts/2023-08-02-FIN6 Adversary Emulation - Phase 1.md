@@ -434,28 +434,6 @@ plink -ssh #{user}@#{server}
 Example: C:\>plink -ssh root@192.168.101.1
 ```
 
-Alternatively, we can use another PuTTY SSH module called `PSCP`. PSCP (PuTTY Secure Copy Protocol) is a command-line tool for transferring files and folders from a Windows computer to a Linux computer.
-
-But before that, we need to check if SSH port is already open our the AttackerVM:
-
-```bash
-nmap -sV [Attacker IP]
-```
-
-Based on the Nmap scan, we can see that we only one open port which is the HTTP server that we have created earlier.
-
-You can execute the following command to install and enable the remote SSH open server in Kali Linux
-
-```bash
-service ssh start
-service ssh status
-```
-
-FIN6
-FIN6
-FIN6
-FIN6
-FIN6
 FIN6
 
 ## References
