@@ -473,8 +473,7 @@ meterpreter > shell
 We can now transfer the file ad.7z back to our Attacker VM using the following command:
 
 
-
-Once executed, type `y` to store and cache the key of the AttackerVM and then type the password:
+Once executed, type _y_ to store and cache the key of the AttackerVM and then type the user password:
 
 FIN6
 
