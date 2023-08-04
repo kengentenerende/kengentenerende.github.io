@@ -423,8 +423,6 @@ The following command adds the ad_* text files to the ad.7z archive and performs
 PS > .\7.exe a -mx3 ad.7z ad_*
 ```
 
-![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-4_1_7zip_Acrhive_Collection.png){:width="100%"}
-
 
 FIN6
 
