@@ -490,7 +490,7 @@ Once executed, type `y` to store and cache the key of the AttackerVM and then ty
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-4_2_PSCP_Exfiltration.png){:width="100%"}
 
-This will conclude the Phase 1 of Adversary Emulation for FIN6. Happy Hunting!
+This will conclude the Phase 1 of Adversary Emulation for FIN6. Happy Hunting!!
 
 ## References
 
