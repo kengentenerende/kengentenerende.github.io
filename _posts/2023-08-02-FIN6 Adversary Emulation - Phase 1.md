@@ -12,7 +12,7 @@ mermaid: true
 
 FIN6 is thought to be a financially motivated cyber-crime group. The group has aggressively targeted and compromised high-volume POS systems in the hospitality and retail sectors since at least 2015. FIN6 has targeted e-commerce sites and multinational organizations. Most of the group’s targets have been located in the United States and Europe, but include companies in Australia, Canada, Spain, India, Kazakhstan, Serbia, and China.
 
-## Objective
+## Objectives
 
 The aim is to present a step-by-step guide of the Center for Threat-Informed Defense (CTID) FIN6 Adversary Emulation Plan, which comprises the following stages: Initial Access, Discovery, Privilege Escalation, and Collection and Exfiltration.
 
