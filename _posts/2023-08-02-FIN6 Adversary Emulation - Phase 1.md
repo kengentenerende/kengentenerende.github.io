@@ -275,7 +275,7 @@ PS > type ad_subnets_ps.txt
 
 ### 2.6 - Permission Groups Discovery: Domain Groups [**T1069.002**](https://attack.mitre.org/techniques/T1069/002/)
 
-FIN6 can extract uses AdFind to enumerate groups in the domain and writes the output to a file.
+FIN6 can use AdFind to extract and to enumerate groups in the domain and writes the output to a file.
 
 FIN6 procedure:
 
