@@ -8,13 +8,9 @@ math: true
 mermaid: true
 ---
 
-## Overview
+## FIN6 Overview
 
 FIN6 is thought to be a financially motivated cyber-crime group. The group has aggressively targeted and compromised high-volume POS systems in the hospitality and retail sectors since at least 2015. FIN6 has targeted e-commerce sites and multinational organizations. Most of the group’s targets have been located in the United States and Europe, but include companies in Australia, Canada, Spain, India, Kazakhstan, Serbia, and China.
-
-## Objective
-
-Text Here
 
 ## Step 1 - Initial Access
 
@@ -494,7 +490,7 @@ Once executed, type `y` to store and cache the key of the AttackerVM and then ty
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-4_2_PSCP_Exfiltration.png){:width="100%"}
 
-This will conclude the Phase 1 of Adversary Emulation for FIN6. Happy Hunting!!
+This will conclude the Phase 1 of Adversary Emulation for FIN6. Happy Hunting!
 
 ## References
 
