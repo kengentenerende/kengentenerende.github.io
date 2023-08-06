@@ -515,7 +515,7 @@ This will conclude the Phase 1 of Adversary Emulation for FIN6.
 
 <h1>Happy Hunting!!</h1>
 
-## Detection Oppurtunities
+## Detection Opportunities
 
 TBD.
 
