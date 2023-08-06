@@ -513,7 +513,7 @@ Once executed, type `y` to store and cache the key of the AttackerVM and then ty
 
 This will conclude the Phase 1 of Adversary Emulation for FIN6. 
 
-</h1>Happy Hunting!!</h1>
+<h1>Happy Hunting!!</h1>
 
 ## Detection Oppurtunities
 
@@ -521,7 +521,12 @@ TBD.
 
 ## References
 
-- https://github.com/center-for-threat-informed-defense/adversary_emulation_library/blob/master/fin6/Emulation_Plan/Phase1.md
+| Links                                                                                                                         | 
+|:------------------------------------------------------------------------------------------------------------------------------|
+| https://github.com/center-for-threat-informed-defense/adversary_emulation_library/blob/master/fin6/Emulation_Plan/Phase1.md   | 
+
+
+- 
 - https://github.com/maddev-engenuity/AdversaryEmulation/tree/main
 - https://www.offsec.com/metasploit-unleashed/msfvenom/
 - https://www2.fireeye.com/rs/848-DID-242/images/rpt-fin6.pdf
