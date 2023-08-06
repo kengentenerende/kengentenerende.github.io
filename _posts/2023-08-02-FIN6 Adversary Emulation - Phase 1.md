@@ -14,7 +14,7 @@ FIN6 is thought to be a financially motivated cyber-crime group. The group has a
 
 ## Objective
 
-test
+The aim is to present a step-by-step guide of the Center for Threat-Informed Defense (CTID) FIN6 Adversary Emulation Plan [**Phase 1**](https://github.com/center-for-threat-informed-defense/adversary_emulation_library/blob/master/fin6/Emulation_Plan/Phase1.md), which comprises the following stages: Initial Access, Discovery, Privilege Escalation, and Collection and Exfiltration.
 
 
 ## Step 1 - Initial Access
