@@ -521,9 +521,9 @@ TBD.
 
 ## References
 
-| Links                                                                                                                         | 
-|:------------------------------------------------------------------------------------------------------------------------------|
-| https://github.com/center-for-threat-informed-defense/adversary_emulation_library/blob/master/fin6/Emulation_Plan/Phase1.md   | 
+| Links                                                                                                                          | 
+|:-------------------------------------------------------------------------------------------------------------------------------|
+| <https://github.com/center-for-threat-informed-defense/adversary_emulation_library/blob/master/fin6/Emulation_Plan/Phase1.md>  | 
 
 
 - 
