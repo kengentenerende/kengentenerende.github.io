@@ -12,6 +12,12 @@ mermaid: true
 
 FIN6 is thought to be a financially motivated cyber-crime group. The group has aggressively targeted and compromised high-volume POS systems in the hospitality and retail sectors since at least 2015. FIN6 has targeted e-commerce sites and multinational organizations. Most of the group’s targets have been located in the United States and Europe, but include companies in Australia, Canada, Spain, India, Kazakhstan, Serbia, and China.
 
+## Objective
+
+The aim is to present a step-by-step guide of the Center for Threat-Informed Defense (CTID) FIN6 Adversary Emulation Plan, which comprises the following stages: Initial Access, Discovery, Privilege Escalation, and Collection and Exfiltration.
+
+<https://github.com/center-for-threat-informed-defense/adversary_emulation_library/blob/master/fin6/Emulation_Plan/Phase1.md>
+
 ## Step 1 - Initial Access
 
 ### 1.1 - Phishing: Spearphishing Attachment [**T1566.001**](https://attack.mitre.org/techniques/T1566/001/) and via Service [**T1566.003**](https://attack.mitre.org/techniques/T1566/003/)
@@ -494,7 +500,7 @@ This will conclude the Phase 1 of Adversary Emulation for FIN6. Happy Hunting!
 
 ## References
 
-- https://github.com/center-for-threat-informed-defense/adversary_emulation_library/blob/master/fin6/Emulation_Plan/Phase1.md
+- https://github.com/center-for-threat-informed-defense/adversary_emulation_library
 - https://github.com/maddev-engenuity/AdversaryEmulation/tree/main
 - https://www.offsec.com/metasploit-unleashed/msfvenom/
 - https://www2.fireeye.com/rs/848-DID-242/images/rpt-fin6.pdf
