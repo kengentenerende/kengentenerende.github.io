@@ -121,7 +121,7 @@ To start the handler, just execute the following command.
 msf6 exploit(multi/handler) > exploit
 ```
 
-### 1.4 - Tranfser the Payload via Server
+### 1.5 - Tranfser the Payload via Server
 
 After generating the payload using MsfVenom, the next step is to set up an HTTP server to transfer the payload. To do this, follow these steps:
 
@@ -139,7 +139,7 @@ Start a Python3 HTTP server on port 80:
 sudo python3 -m http.server 80
 ```
 
-### 1.5 - Download Payload to Start the Communication on Exploit Handler
+### 1.6 - Download Payload to Start the Communication on Exploit Handler
 
 Switch to the victim's Server, then use a web browser to access the attacker's VM IP address and download the payload.
 
