@@ -18,13 +18,15 @@ The aim is to present a walkthrough of FIN6 Adversary Emulation Plan [**Phase 1*
 
 ## Technical Requirements
 
-- VMware: <https://www.vmware.com/>
-- Kali Linux: <https://www.kali.org/get-kali/>
+VMware: <https://www.vmware.com/>
+Kali Linux: <https://www.kali.org/get-kali/>
 
 The Adversary Emulation was tested on the following Operating System:
 - Windows Server 2019 Standard Evaluation
 
-A script for automation was developed to handle the majority of adversary emulation tasks. You can find this script in the corresponding GitHub repository [**GitHub repository**](https://github.com/kengentenerende/Automation-FIN6-Adversary-Emulation).
+A script for automation was developed to handle the majority of adversary emulation tasks. You can find this script in the corresponding GitHub repository [**GitHub repository**](https://github.com/kengentenerende/Automation-FIN6-Adversary-Emulation)
+
+
 
 ## Step 1 - Initial Access
 
