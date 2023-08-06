@@ -499,7 +499,7 @@ This will conclude the Phase 1 of Adversary Emulation for FIN6. Happy Hunting!!
 
 ## Detection Oppurtunities
 
-TBD
+TBD.
 
 ## References
 
