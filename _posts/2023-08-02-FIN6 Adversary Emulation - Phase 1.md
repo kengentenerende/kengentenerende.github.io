@@ -14,7 +14,7 @@ FIN6 is thought to be a financially motivated cyber-crime group. The group has a
 
 ## Objective
 
-The aim is to present a walkthrough FIN6 Adversary Emulation Plan [**Phase 1**](https://github.com/center-for-threat-informed-defense/adversary_emulation_library/blob/master/fin6/Emulation_Plan/Phase1.md) provided by Center for Threat-Informed Defense or CTID, which comprises the following stages: Initial Access, Discovery, Privilege Escalation, and Collection and Exfiltration.
+The aim is to present a walkthrough of FIN6 Adversary Emulation Plan [**Phase 1**](https://github.com/center-for-threat-informed-defense/adversary_emulation_library/blob/master/fin6/Emulation_Plan/Phase1.md) provided by Center for Threat-Informed Defense or CTID, which comprises the following stages: Initial Access, Discovery, Privilege Escalation, and Collection and Exfiltration.
 
 
 ## Step 1 - Initial Access
@@ -496,6 +496,10 @@ Once executed, type `y` to store and cache the key of the AttackerVM and then ty
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-4_2_PSCP_Exfiltration.png){:width="100%"}
 
 This will conclude the Phase 1 of Adversary Emulation for FIN6. Happy Hunting!!
+
+## Detection Oppurtunities
+
+TBD
 
 ## References
 
