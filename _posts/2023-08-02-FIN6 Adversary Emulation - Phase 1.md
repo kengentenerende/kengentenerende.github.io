@@ -157,9 +157,11 @@ After gaining access to the target network, FIN6 enumerates the network and Acti
 
 ### 2.1 - Software: AdFind [**S0552**](https://attack.mitre.org/software/S0552/)
 
-FIN6 is suspected to have utilized a tool called ADFind for performing network and Active Directory (AD) enumeration on at least one occasion. ADFind is a command-line utility used to search and query Active Directory environments. By employing this tool, FIN6 can efficiently gather information about users, groups, computers, organizational units, and other objects within the AD infrastructure, enabling them to gain valuable insights for their malicious activities and further advance their attack objectives.
+FIN6 is suspected to have utilized a tool called ADFind for performing network and Active Directory (AD) enumeration on at least one occasion.
 
-[**AdFind**](https://www.joeware.net/freetools/tools/adfind/) is a free command-line query tool that can be used for gathering information from Active Directory.
+[**AdFind**](https://www.joeware.net/freetools/tools/adfind/) is a free command-line query tool that can be used for gathering information from Active Directory. 
+
+By employing this tool, FIN6 can efficiently gather information about users, groups, computers, organizational units, and other objects within the AD infrastructure, enabling them to gain valuable insights for their malicious activities and further advance their attack objectives.
 
 On the <kbd>meterpreter></kbd> terminal, we will use PowerShell session instead to download AdFind on Windows directory. To enable PowerShell session, run the following commands:
 
