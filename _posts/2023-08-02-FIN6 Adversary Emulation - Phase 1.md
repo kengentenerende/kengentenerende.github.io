@@ -27,8 +27,8 @@ Kali Linux:
 The Adversary Emulation was tested on the following Operating System:
 - Windows Server 2019 Standard Evaluation
 
-> A script for automation was developed to handle the majority of adversary emulation tasks. You can find this script in the corresponding GitHub repository [**GitHub repository**](https://github.com/kengentenerende/Automation-FIN6-Adversary-Emulation) 
-{: .prompt-tip }
+> A script for automation was developed to handle the majority of adversary emulation tasks. You can find this script in the corresponding [**GitHub repository**](https://github.com/kengentenerende/Automation-FIN6-Adversary-Emulation) 
+{: .prompt-info }
 
 
 
@@ -510,7 +510,9 @@ Once executed, type `y` to store and cache the key of the AttackerVM and then ty
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-4_2_PSCP_Exfiltration.png){:width="100%"}
 
-This will conclude the Phase 1 of Adversary Emulation for FIN6. Happy Hunting!!
+This will conclude the Phase 1 of Adversary Emulation for FIN6. 
+
+</h1>Happy Hunting!!</h1>
 
 ## Detection Oppurtunities
 
