@@ -16,9 +16,6 @@ FIN6 is thought to be a financially motivated cyber-crime group. The group has a
 
 The aim is to present a step-by-step guide of the Center for Threat-Informed Defense (CTID) FIN6 Adversary Emulation Plan, which comprises the following stages: Initial Access, Discovery, Privilege Escalation, and Collection and Exfiltration.
 
-<https://github.com/center-for-threat-informed-defense/adversary_emulation_library/blob/master/fin6/Emulation_Plan/Phase1.md>
-
-
 ## Step 1 - Initial Access
 
 ### 1.1 - Phishing: Spearphishing Attachment [**T1566.001**](https://attack.mitre.org/techniques/T1566/001/) and via Service [**T1566.003**](https://attack.mitre.org/techniques/T1566/003/)
