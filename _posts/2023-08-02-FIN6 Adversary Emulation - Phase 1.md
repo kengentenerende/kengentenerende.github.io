@@ -469,7 +469,7 @@ nmap -sV [Attacker IP]
 
 ![]({{site.baseurl}}/assets/img/2023-08-02-FIN6 Adversary Emulation - Phase 1/2023-08-02-4_2_NMAP_SSH_Close.png){:width="100%"}
 
-Based on the Nmap scan, we can see that we only one open port which is the HTTP server that we have created earlier.
+Based on the Nmap scan, we can see that we only have one open port which is the HTTP server that we have created earlier.
 
 You can execute the following command to install and enable the remote SSH open server in Kali Linux
 
